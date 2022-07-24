@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_BarbBannerI</defName>
+    <label>Barbarian Banner I</label>
+    <description>A Round shield looted from the battlefield.</description>
+    <equipmentType>None</equipmentType>
+    <graphicData>
+      <texPath>Shields/BarbBannerI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>100</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>2.0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+      <MoveSpeed>-1.6</MoveSpeed>
+    </equippedStatOffsets>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <comps>
+      <li Class="PawnShields.CompProperties_Shield">
+        <!-- Rendering systems -->
+        <wieldedGraphic>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <texPath>Shields/BarbBannerI</texPath>
+          <drawSize>(2.5, 2.5)</drawSize>
+        </wieldedGraphic>
+        <renderProperties>
+          <!-- Same as defaults in C# -->
+          <northOffset>(-0.40, -0.033, -0.3)</northOffset> <!--horixontal, drawn in front or back, vertical-->
+          <southOffset>(0.40, 0.033, 0.6)</southOffset>
+          <westOffset>(-0.20, -0.053, -0.3)</westOffset>
+          <eastOffset>(0.20, -0.017, -0.3)</eastOffset>
+          <flipRotation>true</flipRotation>
+          <renderWhenPeaceful>false</renderWhenPeaceful>
+        </renderProperties>
+        <!-- Blocking system (Optional???) -->
+        <canBlockRanged>true</canBlockRanged>
+        <canBlockMelee>true</canBlockMelee>
+        <meleeBlockChanceFactor>8.0</meleeBlockChanceFactor>
+        <!-- Default: 1.0 == 100% -->
+        <rangedBlockChanceFactor>0.5</rangedBlockChanceFactor>
+        <!-- Shield damage system (Optional) -->
+        <shieldTakeDamage>true</shieldTakeDamage>
+        <shieldTakeDamageFactor>1.2</shieldTakeDamageFactor>
+        <!-- Auto discard system (Optional) -->
+        <canBeAutoDiscarded>true</canBeAutoDiscarded>
+        <healthAutoDiscardThreshold>0.2</healthAutoDiscardThreshold>
+        <!-- Shield fatigue system (Optional) -->
+        <useFatigue>true</useFatigue>
+        <damageToFatigueFactor>0.005</damageToFatigueFactor>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>side</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>0.8</cooldownTime>
+      </li>
+      <li>
+        <label>buckle</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.0</power>
+        <cooldownTime>1.3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeBarbBannerI</defName>
+    <label>make Round shield</label>
+    <description>Make a Round shield looted from the battlefield.</description>
+    <jobString>Making Shield.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Shield</li>
+            <li>DankPyon_ShieldKite</li>
+            <li>DankPyon_ShieldHeater</li>
+            <li>DankPyon_ShieldHeater_Amboise</li>
+            <li>DankPyon_ShieldHeater_Soren</li>
+            <li>DankPyon_ShieldHeater_Oswin</li>
+            <li>DankPyon_ShieldHeater_Hesse</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_Shield</li>
+        <li>DankPyon_ShieldKite</li>
+        <li>DankPyon_ShieldHeater</li>
+        <li>DankPyon_ShieldHeater_Amboise</li>
+        <li>DankPyon_ShieldHeater_Soren</li>
+        <li>DankPyon_ShieldHeater_Oswin</li>
+        <li>DankPyon_ShieldHeater_Hesse</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_BarbBannerI>1</pphhyy_Barbarian_BarbBannerI>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_BarbBannerII</defName>
+    <label>Barbarian Banner II</label>
+    <description>A Round shield looted from the battlefield.</description>
+    <equipmentType>None</equipmentType>
+    <graphicData>
+      <texPath>Shields/BarbBannerII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>100</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>2.0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+      <MoveSpeed>-1.6</MoveSpeed>
+    </equippedStatOffsets>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <comps>
+      <li Class="PawnShields.CompProperties_Shield">
+        <!-- Rendering systems -->
+        <wieldedGraphic>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <texPath>Shields/BarbBannerII</texPath>
+          <drawSize>(2.5, 2.5)</drawSize>
+        </wieldedGraphic>
+        <renderProperties>
+          <!-- Same as defaults in C# -->
+          <northOffset>(-0.40, -0.033, -0.3)</northOffset> <!--horixontal, drawn in front or back, vertical-->
+          <southOffset>(0.40, 0.033, 0.6)</southOffset>
+          <westOffset>(-0.20, -0.053, -0.3)</westOffset>
+          <eastOffset>(0.20, -0.017, -0.3)</eastOffset>
+          <flipRotation>true</flipRotation>
+          <renderWhenPeaceful>false</renderWhenPeaceful>
+        </renderProperties>
+        <!-- Blocking system (Optional???) -->
+        <canBlockRanged>true</canBlockRanged>
+        <canBlockMelee>true</canBlockMelee>
+        <meleeBlockChanceFactor>8.0</meleeBlockChanceFactor>
+        <!-- Default: 1.0 == 100% -->
+        <rangedBlockChanceFactor>0.5</rangedBlockChanceFactor>
+        <!-- Shield damage system (Optional) -->
+        <shieldTakeDamage>true</shieldTakeDamage>
+        <shieldTakeDamageFactor>1.2</shieldTakeDamageFactor>
+        <!-- Auto discard system (Optional) -->
+        <canBeAutoDiscarded>true</canBeAutoDiscarded>
+        <healthAutoDiscardThreshold>0.2</healthAutoDiscardThreshold>
+        <!-- Shield fatigue system (Optional) -->
+        <useFatigue>true</useFatigue>
+        <damageToFatigueFactor>0.005</damageToFatigueFactor>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>side</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>0.8</cooldownTime>
+      </li>
+      <li>
+        <label>buckle</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.0</power>
+        <cooldownTime>1.3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeBarbBannerII</defName>
+    <label>make Round shield</label>
+    <description>Make a Round shield looted from the battlefield.</description>
+    <jobString>Making Shield.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Shield</li>
+            <li>DankPyon_ShieldKite</li>
+            <li>DankPyon_ShieldHeater</li>
+            <li>DankPyon_ShieldHeater_Amboise</li>
+            <li>DankPyon_ShieldHeater_Soren</li>
+            <li>DankPyon_ShieldHeater_Oswin</li>
+            <li>DankPyon_ShieldHeater_Hesse</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_Shield</li>
+        <li>DankPyon_ShieldKite</li>
+        <li>DankPyon_ShieldHeater</li>
+        <li>DankPyon_ShieldHeater_Amboise</li>
+        <li>DankPyon_ShieldHeater_Soren</li>
+        <li>DankPyon_ShieldHeater_Oswin</li>
+        <li>DankPyon_ShieldHeater_Hesse</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_BarbBannerII>1</pphhyy_Barbarian_BarbBannerII>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_BarbBannerIII</defName>
+    <label>Barbarian Banner III</label>
+    <description>A Round shield looted from the battlefield.</description>
+    <equipmentType>None</equipmentType>
+    <graphicData>
+      <texPath>Shields/BarbBannerIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>100</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>2.0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+      <MoveSpeed>-1.6</MoveSpeed>
+    </equippedStatOffsets>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <comps>
+      <li Class="PawnShields.CompProperties_Shield">
+        <!-- Rendering systems -->
+        <wieldedGraphic>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <texPath>Shields/BarbBannerIII</texPath>
+          <drawSize>(2.5, 2.5)</drawSize>
+        </wieldedGraphic>
+        <renderProperties>
+          <!-- Same as defaults in C# -->
+          <northOffset>(-0.40, -0.033, -0.3)</northOffset> <!--horixontal, drawn in front or back, vertical-->
+          <southOffset>(0.40, 0.033, 0.6)</southOffset>
+          <westOffset>(-0.20, -0.053, -0.3)</westOffset>
+          <eastOffset>(0.20, -0.017, -0.3)</eastOffset>
+          <flipRotation>true</flipRotation>
+          <renderWhenPeaceful>false</renderWhenPeaceful>
+        </renderProperties>
+        <!-- Blocking system (Optional???) -->
+        <canBlockRanged>true</canBlockRanged>
+        <canBlockMelee>true</canBlockMelee>
+        <meleeBlockChanceFactor>8.0</meleeBlockChanceFactor>
+        <!-- Default: 1.0 == 100% -->
+        <rangedBlockChanceFactor>0.5</rangedBlockChanceFactor>
+        <!-- Shield damage system (Optional) -->
+        <shieldTakeDamage>true</shieldTakeDamage>
+        <shieldTakeDamageFactor>1.2</shieldTakeDamageFactor>
+        <!-- Auto discard system (Optional) -->
+        <canBeAutoDiscarded>true</canBeAutoDiscarded>
+        <healthAutoDiscardThreshold>0.2</healthAutoDiscardThreshold>
+        <!-- Shield fatigue system (Optional) -->
+        <useFatigue>true</useFatigue>
+        <damageToFatigueFactor>0.005</damageToFatigueFactor>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>side</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>0.8</cooldownTime>
+      </li>
+      <li>
+        <label>buckle</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.0</power>
+        <cooldownTime>1.3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeBarbBannerIII</defName>
+    <label>make Round shield</label>
+    <description>Make a Round shield looted from the battlefield.</description>
+    <jobString>Making Shield.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Shield</li>
+            <li>DankPyon_ShieldKite</li>
+            <li>DankPyon_ShieldHeater</li>
+            <li>DankPyon_ShieldHeater_Amboise</li>
+            <li>DankPyon_ShieldHeater_Soren</li>
+            <li>DankPyon_ShieldHeater_Oswin</li>
+            <li>DankPyon_ShieldHeater_Hesse</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_Shield</li>
+        <li>DankPyon_ShieldKite</li>
+        <li>DankPyon_ShieldHeater</li>
+        <li>DankPyon_ShieldHeater_Amboise</li>
+        <li>DankPyon_ShieldHeater_Soren</li>
+        <li>DankPyon_ShieldHeater_Oswin</li>
+        <li>DankPyon_ShieldHeater_Hesse</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_BarbBannerIII>1</pphhyy_Barbarian_BarbBannerIII>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_BarbBannerIV</defName>
+    <label>Barbarian Banner IV</label>
+    <description>A Round shield looted from the battlefield.</description>
+    <equipmentType>None</equipmentType>
+    <graphicData>
+      <texPath>Shields/BarbBannerIV</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>100</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>2.0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+      <MoveSpeed>-1.6</MoveSpeed>
+    </equippedStatOffsets>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <comps>
+      <li Class="PawnShields.CompProperties_Shield">
+        <!-- Rendering systems -->
+        <wieldedGraphic>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <texPath>Shields/BarbBannerIV</texPath>
+          <drawSize>(2.5, 2.5)</drawSize>
+        </wieldedGraphic>
+        <renderProperties>
+          <!-- Same as defaults in C# -->
+          <northOffset>(-0.40, -0.033, -0.3)</northOffset> <!--horixontal, drawn in front or back, vertical-->
+          <southOffset>(0.40, 0.033, 0.6)</southOffset>
+          <westOffset>(-0.20, -0.053, -0.3)</westOffset>
+          <eastOffset>(0.20, -0.017, -0.3)</eastOffset>
+          <flipRotation>true</flipRotation>
+          <renderWhenPeaceful>false</renderWhenPeaceful>
+        </renderProperties>
+        <!-- Blocking system (Optional???) -->
+        <canBlockRanged>true</canBlockRanged>
+        <canBlockMelee>true</canBlockMelee>
+        <meleeBlockChanceFactor>8.0</meleeBlockChanceFactor>
+        <!-- Default: 1.0 == 100% -->
+        <rangedBlockChanceFactor>0.5</rangedBlockChanceFactor>
+        <!-- Shield damage system (Optional) -->
+        <shieldTakeDamage>true</shieldTakeDamage>
+        <shieldTakeDamageFactor>1.2</shieldTakeDamageFactor>
+        <!-- Auto discard system (Optional) -->
+        <canBeAutoDiscarded>true</canBeAutoDiscarded>
+        <healthAutoDiscardThreshold>0.2</healthAutoDiscardThreshold>
+        <!-- Shield fatigue system (Optional) -->
+        <useFatigue>true</useFatigue>
+        <damageToFatigueFactor>0.005</damageToFatigueFactor>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>side</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>0.8</cooldownTime>
+      </li>
+      <li>
+        <label>buckle</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.0</power>
+        <cooldownTime>1.3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeBarbBannerIV</defName>
+    <label>make Round shield</label>
+    <description>Make a Round shield looted from the battlefield.</description>
+    <jobString>Making Shield.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Shield</li>
+            <li>DankPyon_ShieldKite</li>
+            <li>DankPyon_ShieldHeater</li>
+            <li>DankPyon_ShieldHeater_Amboise</li>
+            <li>DankPyon_ShieldHeater_Soren</li>
+            <li>DankPyon_ShieldHeater_Oswin</li>
+            <li>DankPyon_ShieldHeater_Hesse</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_Shield</li>
+        <li>DankPyon_ShieldKite</li>
+        <li>DankPyon_ShieldHeater</li>
+        <li>DankPyon_ShieldHeater_Amboise</li>
+        <li>DankPyon_ShieldHeater_Soren</li>
+        <li>DankPyon_ShieldHeater_Oswin</li>
+        <li>DankPyon_ShieldHeater_Hesse</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_BarbBannerIV>1</pphhyy_Barbarian_BarbBannerIV>
+    </products>
+  </RecipeDef>
+
+</Defs>

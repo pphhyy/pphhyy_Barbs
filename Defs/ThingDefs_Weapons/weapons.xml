@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="BaseMeleeWeaponBarb" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Neolithic</techLevel>
+    <smeltable>true</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <weaponClasses>
+      <li>Melee</li>
+    </weaponClasses>
+    <relicChance>1</relicChance>
+    <!-- <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker> -->
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+
+  <ThingDef Name="BaseMeleeWeapon_SharpBarb" ParentName="BaseMeleeWeaponBarb" Abstract="True">
+    <weaponClasses>
+      <li>MeleePiercer</li>
+    </weaponClasses>
+    <!-- <recipeMaker>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Silver</li>
+          <li>Gold</li>
+          <li>WoodLog</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker> -->
+  </ThingDef>
+
+  <ThingDef Name="BaseMeleeWeapon_SharpBarb_Quality" Abstract="True" ParentName="BaseMeleeWeapon_SharpBarb">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="BaseMeleeWeapon_BluntBarb" ParentName="BaseMeleeWeaponBarb" Abstract="True">
+    <weaponClasses>
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+    <!-- <recipeMaker>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Silver</li>
+          <li>Gold</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker> -->
+  </ThingDef>
+
+  <ThingDef Name="BaseMeleeWeapon_BluntBarb_Quality" Abstract="True" ParentName="BaseMeleeWeapon_Sharp">
+    <weaponClasses Inherit="False">
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_BluntBarb_Quality">
+    <defName>pphhyy_Barbarian_BoneClub</defName>
+    <label>Rusted Bone Club</label>
+    <techLevel>Medieval</techLevel>
+    <description>A Bone Club made from the bones of animals or slain enemies..</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_BoneClub</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <costList>
+      <DankPyon_Bone>20</DankPyon_Bone>
+      <!-- <WoodLog>20</WoodLog> -->
+    </costList>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>0.2</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+    <researchPrerequisite>pphhyy_Barbarians_Research</researchPrerequisite>
+      <recipeUsers>
+        <li>pphhyy_Barbarians_Building_WeaponBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>  
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_BluntBarb_Quality">
+    <defName>pphhyy_Barbarian_ClawClub</defName>
+    <label>Rusted Claw Club</label>
+    <techLevel>Medieval</techLevel>
+    <description>A Claw Club made from the bones of animals or slain enemies.</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_ClawClub</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <costList>
+      <DankPyon_Bone>20</DankPyon_Bone>
+      <WoodLog>10</WoodLog>
+    </costList>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>0.1</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+    <researchPrerequisite>pphhyy_Barbarians_Research</researchPrerequisite>
+      <recipeUsers>
+        <li>pphhyy_Barbarians_Building_WeaponBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>  
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_BluntBarb_Quality">
+    <defName>pphhyy_Barbarian_GreatBoneClub</defName>
+    <label>Great Bone Club</label>
+    <techLevel>Medieval</techLevel>
+    <description>A Great Bone Club made from the bones of animals or slain enemies..</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_GreatBoneClub</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <costList>
+      <DankPyon_Bone>50</DankPyon_Bone>
+      <WoodLog>10</WoodLog>
+    </costList>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>0.2</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+    <researchPrerequisite>pphhyy_Barbarians_Research</researchPrerequisite>
+      <recipeUsers>
+        <li>pphhyy_Barbarians_Building_WeaponBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>  
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_BluntBarb_Quality">
+    <defName>pphhyy_Barbarian_GreatSkullMace</defName>
+    <label>Great Skull Mace</label>
+    <techLevel>Medieval</techLevel>
+    <description>A Great Skull Mace made from the bones of animals or slain enemies..</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_GreatSkullMace</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <costList>
+      <DankPyon_Bone>30</DankPyon_Bone>
+      <WoodLog>10</WoodLog>
+      <Skull>1</Skull>
+    </costList>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2.4</cooldownTime>
+        <armorPenetration>0.4</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+    <researchPrerequisite>pphhyy_Barbarians_Research</researchPrerequisite>
+      <recipeUsers>
+        <li>pphhyy_Barbarians_Building_WeaponBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>  
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_RustedSword</defName>
+    <label>Rusted Sword</label>
+    <techLevel>Medieval</techLevel>
+    <description>A rusted sword made from a weapon looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_RustedSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <!-- <costList>
+      <Skull>1</Skull>
+    </costList> -->
+    <!-- <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MeleeWeapon_Gladius</li>
+                        <li>MeleeWeapon_LongSword</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Skull</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+    </ingredients>
+    <fixedIngredientFilter>
+            <thingDefs>
+                <li>MeleeWeapon_Gladius</li>
+                <li>MeleeWeapon_LongSword</li>
+                <li>Skull</li>
+            </thingDefs>
+    </fixedIngredientFilter> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2</cooldownTime>
+        <armorPenetration>0.2</armorPenetration>
+      </li>
+    </tools>
+    <!-- <recipeMaker>
+    <researchPrerequisite>pphhyy_Barbarians_Research</researchPrerequisite>
+      <recipeUsers>
+        <li>pphhyy_Barbarians_Building_WeaponBench</li>
+      </recipeUsers>
+    </recipeMaker> -->
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>  
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeRustedSword</defName>
+    <label>make Rusted Sword</label>
+    <description>Make a rusted sword made from a weapon looted on the battlefield.</description>
+    <jobString>Making Rusted Sword.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MeleeWeapon_Gladius</li>
+            <li>MeleeWeapon_LongSword</li>
+            <li>DankPyon_MeleeWeapon_Falchion</li>
+            <li>DankPyon_MeleeWeapon_ArmingSword</li>
+            <li>DankPyon_MeleeWeapon_FencingSword</li>
+            <li>DankPyon_MeleeWeapon_NobleSword</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MeleeWeapon_Gladius</li>
+        <li>MeleeWeapon_LongSword</li>
+        <li>DankPyon_MeleeWeapon_Falchion</li>
+        <li>DankPyon_MeleeWeapon_ArmingSword</li>
+        <li>DankPyon_MeleeWeapon_FencingSword</li>
+        <li>DankPyon_MeleeWeapon_NobleSword</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_RustedSword>1</pphhyy_Barbarian_RustedSword>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_RustedClaymore</defName>
+    <label>Rusted Claymore</label>
+    <techLevel>Medieval</techLevel>
+    <description>A rusted Claymore made from a weapon looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_RustedClaymore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>2.8</cooldownTime>
+        <armorPenetration>0.4</armorPenetration>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>  
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeRustedClaymore</defName>
+    <label>make Rusted Claymore</label>
+    <description>Make a rusted Claymore made from a weapon looted on the battlefield.</description>
+    <jobString>Making Rusted Claymore.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_MeleeWeapon_Longsword</li>
+            <li>MeleeWeapon_LongSword</li>
+            <li>DankPyon_MeleeWeapon_Greatsword</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_MeleeWeapon_Longsword</li>
+        <li>MeleeWeapon_LongSword</li>
+        <li>DankPyon_MeleeWeapon_Greatsword</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_RustedClaymore>1</pphhyy_Barbarian_RustedClaymore>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_RustedAxe</defName>
+    <label>Rusted Axe</label>
+    <techLevel>Medieval</techLevel>
+    <description>A rusted Axe made from a weapon looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_RustedAxe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2.0</cooldownTime>
+        <armorPenetration>0.3</armorPenetration>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>  
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeRustedAxe</defName>
+    <label>make Rusted Axe</label>
+    <description>Make a rusted Axe made from a weapon looted on the battlefield.</description>
+    <jobString>Making Rusted Axe.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_MeleeWeapon_Hatchet</li>
+            <li>DankPyon_MeleeWeapon_Handaxe</li>
+            <li>DankPyon_MeleeWeapon_FightingAxe</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_MeleeWeapon_Hatchet</li>
+        <li>DankPyon_MeleeWeapon_Handaxe</li>
+        <li>DankPyon_MeleeWeapon_FightingAxe</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_RustedAxe>1</pphhyy_Barbarian_RustedAxe>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_RustedBattleAxe</defName>
+    <label>Rusted Battle Axe</label>
+    <techLevel>Medieval</techLevel>
+    <description>A rusted Battle Axe made from a weapon looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_RustedBattleAxe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2.8</cooldownTime>
+        <armorPenetration>0.4</armorPenetration>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>false</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeRustedBattleAxe</defName>
+    <label>make Rusted Battle Axe</label>
+    <description>Make a rusted Battle Axe made from a weapon looted on the battlefield.</description>
+    <jobString>Making Rusted Battle Axe.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_MeleeWeapon_WoodcuttersAxe</li>
+            <li>DankPyon_MeleeWeapon_Bardiche</li>
+            <li>DankPyon_MeleeWeapon_Greataxe</li>
+            <li>DankPyon_MeleeWeapon_Longaxe</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_MeleeWeapon_WoodcuttersAxe</li>
+        <li>DankPyon_MeleeWeapon_Bardiche</li>
+        <li>DankPyon_MeleeWeapon_Greataxe</li>
+        <li>DankPyon_MeleeWeapon_Longaxe</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_RustedBattleAxe>1</pphhyy_Barbarian_RustedBattleAxe>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_RustedGlaive</defName>
+    <label>Rusted Glaive</label>
+    <techLevel>Medieval</techLevel>
+    <description>A rusted Glaive made from a weapon looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_RustedGlaive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>2.4</cooldownTime>
+        <armorPenetration>0.3</armorPenetration>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>false</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeRustedGlaive</defName>
+    <label>make Rusted Glaive</label>
+    <description>Make a Rusted Glaive made from a weapon looted on the battlefield.</description>
+    <jobString>Making Rusted Glaive.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_MeleeWeapon_Warfork</li>
+            <li>DankPyon_MeleeWeapon_Spetum</li>
+            <li>DankPyon_MeleeWeapon_Pitchfork</li>
+            <li>DankPyon_MeleeWeapon_HookedBlade</li>
+            <li>MeleeWeapon_Spear</li>
+            <li>DankPyon_MeleeWeapon_Billhook</li>
+            <li>DankPyon_MeleeWeapon_Pike</li>
+            <li>DankPyon_MeleeWeapon_Swordlance</li>
+            <li>DankPyon_MeleeWeapon_MilitiaSpear</li>
+            <li>DankPyon_MeleeWeapon_BoarSpear</li>
+            <li>DankPyon_MeleeWeapon_FightingSpear</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_MeleeWeapon_Warfork</li>
+        <li>DankPyon_MeleeWeapon_Spetum</li>
+        <li>DankPyon_MeleeWeapon_Pitchfork</li>
+        <li>DankPyon_MeleeWeapon_HookedBlade</li>
+        <li>MeleeWeapon_Spear</li>
+        <li>DankPyon_MeleeWeapon_Billhook</li>
+        <li>DankPyon_MeleeWeapon_Pike</li>
+        <li>DankPyon_MeleeWeapon_Swordlance</li>
+        <li>DankPyon_MeleeWeapon_MilitiaSpear</li>
+        <li>DankPyon_MeleeWeapon_BoarSpear</li>
+        <li>DankPyon_MeleeWeapon_FightingSpear</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_RustedGlaive>1</pphhyy_Barbarian_RustedGlaive>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_RustedMace</defName>
+    <label>Rusted Mace</label>
+    <techLevel>Medieval</techLevel>
+    <description>A rusted Mace made from a weapon looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_RustedMace</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.1</cooldownTime>
+        <armorPenetration>0.4</armorPenetration>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>  
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeRustedMace</defName>
+    <label>make Rusted Mace</label>
+    <description>Make a rusted Mace made from a weapon looted on the battlefield.</description>
+    <jobString>Making Rusted Mace.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MeleeWeapon_Mace</li>
+            <li>DankPyon_MeleeWeapon_Bludgeon</li>
+            <li>DankPyon_MeleeWeapon_NomadMace</li>
+            <li>DankPyon_MeleeWeapon_MorningStar</li>
+            <li>DankPyon_MeleeWeapon_WingedMace</li>
+            <li>DankPyon_MeleeWeapon_Goedendag</li>
+            <li>DankPyon_MeleeWeapon_Pickaxe</li>
+            <li>DankPyon_MeleeWeapon_MilitaryPick</li>
+            <li>DankPyon_MeleeWeapon_Warhammer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MeleeWeapon_Mace</li>
+        <li>DankPyon_MeleeWeapon_Bludgeon</li>
+        <li>DankPyon_MeleeWeapon_NomadMace</li>
+        <li>DankPyon_MeleeWeapon_MorningStar</li>
+        <li>DankPyon_MeleeWeapon_WingedMace</li>
+        <li>DankPyon_MeleeWeapon_Goedendag</li>
+        <li>DankPyon_MeleeWeapon_Pickaxe</li>
+        <li>DankPyon_MeleeWeapon_MilitaryPick</li>
+        <li>DankPyon_MeleeWeapon_Warhammer</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_RustedMace>1</pphhyy_Barbarian_RustedMace>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_RustedSkullMace</defName>
+    <label>Rusted skull Mace</label>
+    <techLevel>Medieval</techLevel>
+    <description>A rusted skull Mace made from a weapon looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_RustedSkullMace</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>2.1</cooldownTime>
+        <armorPenetration>0.4</armorPenetration>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>  
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeRustedSkullMace</defName>
+    <label>make Rusted skull Mace</label>
+    <description>Make a rusted skull Mace made from a weapon looted on the battlefield.</description>
+    <jobString>Making Rusted Mace.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MeleeWeapon_Mace</li>
+            <li>DankPyon_MeleeWeapon_Bludgeon</li>
+            <li>DankPyon_MeleeWeapon_NomadMace</li>
+            <li>DankPyon_MeleeWeapon_MorningStar</li>
+            <li>DankPyon_MeleeWeapon_WingedMace</li>
+            <li>DankPyon_MeleeWeapon_Goedendag</li>
+            <li>DankPyon_MeleeWeapon_Pickaxe</li>
+            <li>DankPyon_MeleeWeapon_MilitaryPick</li>
+            <li>DankPyon_MeleeWeapon_Warhammer</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MeleeWeapon_Mace</li>
+        <li>DankPyon_MeleeWeapon_Bludgeon</li>
+        <li>DankPyon_MeleeWeapon_NomadMace</li>
+        <li>DankPyon_MeleeWeapon_MorningStar</li>
+        <li>DankPyon_MeleeWeapon_WingedMace</li>
+        <li>DankPyon_MeleeWeapon_Goedendag</li>
+        <li>DankPyon_MeleeWeapon_Pickaxe</li>
+        <li>DankPyon_MeleeWeapon_MilitaryPick</li>
+        <li>DankPyon_MeleeWeapon_Warhammer</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_RustedSkullMace>1</pphhyy_Barbarian_RustedSkullMace>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_RustedGreatSkullMace</defName>
+    <label>Rusted Great Skull Mace</label>
+    <techLevel>Medieval</techLevel>
+    <description>A rusted Great Skull Mace made from a weapon looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Weapons/Barbarian_RustedGreatSkullMace</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.4</drawSize>
+    </graphicData>
+    <uiIconScale>1.2</uiIconScale>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Neolithic</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>1</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <burnableByRecipe>True</burnableByRecipe>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>2.8</cooldownTime>
+        <armorPenetration>0.4</armorPenetration>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+    <modExtensions>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VFECore.ThingDefExtension">
+        <usableWithShields>false</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeRustedGreatSkullMace</defName>
+    <label>make Rusted Great Skull Mace</label>
+    <description>Make a rusted Great Skull Mace made from a weapon looted on the battlefield.</description>
+    <jobString>Making Rusted Battle Axe.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_MeleeWeapon_TwoHandedMallet</li>
+            <li>DankPyon_MeleeWeapon_TwoHandedHammer</li>
+            <li>DankPyon_MeleeWeapon_Polehammer</li>
+            <li>DankPyon_MeleeWeapon_Goedendag</li>
+            <li>DankPyon_MeleeWeapon_TwoHandedFlangedMace</li>
+            <li>DankPyon_MeleeWeapon_TwoHandedMace</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_MeleeWeapon_TwoHandedMallet</li>
+        <li>DankPyon_MeleeWeapon_TwoHandedHammer</li>
+        <li>DankPyon_MeleeWeapon_Polehammer</li>
+        <li>DankPyon_MeleeWeapon_Goedendag</li>
+        <li>DankPyon_MeleeWeapon_TwoHandedFlangedMace</li>
+        <li>DankPyon_MeleeWeapon_TwoHandedMace</li>
+        <li MayRequire="Ludeon.RimWorld.Ideology">Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_RustedGreatSkullMace>1</pphhyy_Barbarian_RustedGreatSkullMace>
+    </products>
+  </RecipeDef>
+
+</Defs>

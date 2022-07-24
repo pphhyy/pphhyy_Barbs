@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_ChosenScale</defName>
+    <label>Chosen Scale</label>
+    <description>Chosen Scale made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/ChosenScale/ChosenScale</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costList>
+        <Steel>120</Steel>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>15</Mass>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <!-- <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags> -->
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/ChosenScale/ChosenScale</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <!-- <li>Dunedain_Plate</li> -->
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <!-- <defaultOutfitTags>
+        <li>Arnorian_Plate</li>
+      </defaultOutfitTags> -->
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeChosenScale</defName>
+    <label>make Chosen Scale</label>
+    <description>Make a Chosen Scale set made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Apparel_PowerArmor</li>
+            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li> -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Apparel_PowerArmor</li>
+        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li> -->
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_ChosenScale>1</pphhyy_Barbarian_ChosenScale>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_ChosenScaleII</defName>
+    <label>Chosen Scale II</label>
+    <description>Chosen Scale made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/ChosenScale/ChosenScaleII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costList>
+        <Steel>120</Steel>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>15</Mass>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <!-- <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags> -->
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/ChosenScale/ChosenScaleII</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <!-- <li>Dunedain_Plate</li> -->
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <!-- <defaultOutfitTags>
+        <li>Arnorian_Plate</li>
+      </defaultOutfitTags> -->
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeChosenScaleII</defName>
+    <label>make Chosen Scale II</label>
+    <description>Make a Chosen Scale set made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Apparel_PowerArmor</li>
+            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li> -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Apparel_PowerArmor</li>
+        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li> -->
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_ChosenScaleII>1</pphhyy_Barbarian_ChosenScaleII>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+</Defs>

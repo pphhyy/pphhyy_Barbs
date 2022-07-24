@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef ParentName="BaseBarbarianMOResearch">
+		<defName>pphhyy_Barbarians_Research</defName>
+		<label>Barbarians Research</label>
+		<description>Teachings of the elders for effective raiding.</description>
+        <techLevel>Neolithic</techLevel>
+        <baseCost>500</baseCost>
+		<researchViewX>0.00</researchViewX>
+		<researchViewY>0.0</researchViewY>
+	</ResearchProjectDef>
+
+	
+</Defs>

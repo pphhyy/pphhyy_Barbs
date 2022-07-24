@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_BoneArmor</defName>
+    <label>Bone Armor</label>
+    <description>Bone Armor made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>pphhyy_Barbarians_Research</researchPrerequisite>
+      <recipeUsers>
+        <li>pphhyy_Barbarians_Building_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/BoneArmor/BoneArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costList>
+        <DankPyon_Bone>120</DankPyon_Bone>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>15</Mass>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.5</ArmorRating_Heat>
+      <Insulation_Cold>10</Insulation_Cold>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <!-- <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags> -->
+    <equippedStatOffsets>
+      <MoveSpeed>0.0</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/BoneArmor/BoneArmor</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <!-- <li>Dunedain_Plate</li> -->
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <!-- <defaultOutfitTags>
+        <li>Arnorian_Plate</li>
+      </defaultOutfitTags> -->
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeBoneArmor</defName>
+    <label>make Bone Armor</label>
+    <description>Make a Bone Armor set made from bones.</description>
+    <jobString>Making Bone Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarian_BarbTribal</li>
+            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li> -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Bone</li>
+          </thingDefs>
+        </filter>
+        <count>80</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarian_BarbTribal</li>
+        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li> -->
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_BoneArmor>1</pphhyy_Barbarian_BoneArmor>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_BoneArmorII</defName>
+    <label>Bone Armor</label>
+    <description>Bone Armor made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/BoneArmor/BoneArmorII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costList>
+        <Steel>120</Steel>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>15</Mass>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <!-- <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags> -->
+    <equippedStatOffsets>
+      <MoveSpeed>0.0</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/BoneArmor/BoneArmorII</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <!-- <li>Dunedain_Plate</li> -->
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <!-- <defaultOutfitTags>
+        <li>Arnorian_Plate</li>
+      </defaultOutfitTags> -->
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeBoneArmorII</defName>
+    <label>make Bone Armor II</label>
+    <description>Make a Bone Armor set made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Bone Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarian_BoneArmor</li>
+            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li> -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarian_BoneArmor</li>
+        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li> -->
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_BoneArmorII>1</pphhyy_Barbarian_BoneArmorII>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_BoneArmorIII</defName>
+    <label>Bone Armor</label>
+    <description>Bone Armor made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/BoneArmor/BoneArmorIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costList>
+        <Steel>120</Steel>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>15</Mass>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <!-- <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags> -->
+    <equippedStatOffsets>
+      <MoveSpeed>0.0</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/BoneArmor/BoneArmorIII</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <!-- <li>Dunedain_Plate</li> -->
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <!-- <defaultOutfitTags>
+        <li>Arnorian_Plate</li>
+      </defaultOutfitTags> -->
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeBoneArmorIII</defName>
+    <label>make Bone Armor III</label>
+    <description>Make a Bone Armor set made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Bone Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarian_BoneArmorII</li>
+            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li> -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarian_BoneArmorII</li>
+        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li> -->
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_BoneArmorIII>1</pphhyy_Barbarian_BoneArmorIII>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+</Defs>

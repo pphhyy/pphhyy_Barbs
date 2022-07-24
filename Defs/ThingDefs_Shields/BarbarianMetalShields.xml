@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_MetalShield</defName>
+    <label>Barbarian Metal Shield</label>
+    <description>A Metal shield looted from the battlefield.</description>
+    <equipmentType>None</equipmentType>
+    <graphicData>
+      <texPath>Shields/Barbarian_MetalShield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>100</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>2.0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+      <MoveSpeed>-1.6</MoveSpeed>
+    </equippedStatOffsets>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <comps>
+      <li Class="PawnShields.CompProperties_Shield">
+        <!-- Rendering systems -->
+        <wieldedGraphic>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <texPath>Shields/Barbarian_MetalShield</texPath>
+          <drawSize>(1.1, 1.1)</drawSize>
+        </wieldedGraphic>
+        <renderProperties>
+          <!-- Same as defaults in C# -->
+          <northOffset>(-0.25, -0.033, -0.1)</northOffset> <!--horixontal, drawn in front or back, vertical-->
+          <southOffset>(0.25, 0.033, -0.2)</southOffset>
+          <westOffset>(-0.13, -0.053, -0.1)</westOffset>
+          <eastOffset>(0.13, -0.017, -0.1)</eastOffset>
+          <flipRotation>true</flipRotation>
+          <renderWhenPeaceful>false</renderWhenPeaceful>
+        </renderProperties>
+        <!-- Blocking system (Optional???) -->
+        <canBlockRanged>true</canBlockRanged>
+        <canBlockMelee>true</canBlockMelee>
+        <meleeBlockChanceFactor>8.0</meleeBlockChanceFactor>
+        <!-- Default: 1.0 == 100% -->
+        <rangedBlockChanceFactor>0.5</rangedBlockChanceFactor>
+        <!-- Shield damage system (Optional) -->
+        <shieldTakeDamage>true</shieldTakeDamage>
+        <shieldTakeDamageFactor>1.2</shieldTakeDamageFactor>
+        <!-- Auto discard system (Optional) -->
+        <canBeAutoDiscarded>true</canBeAutoDiscarded>
+        <healthAutoDiscardThreshold>0.2</healthAutoDiscardThreshold>
+        <!-- Shield fatigue system (Optional) -->
+        <useFatigue>true</useFatigue>
+        <damageToFatigueFactor>0.005</damageToFatigueFactor>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>side</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>0.8</cooldownTime>
+      </li>
+      <li>
+        <label>buckle</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.0</power>
+        <cooldownTime>1.3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeMetalShield</defName>
+    <label>make Metal shield</label>
+    <description>Make a Metal shield looted from the battlefield.</description>
+    <jobString>Making Shield.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Shield</li>
+            <li>DankPyon_ShieldKite</li>
+            <li>DankPyon_ShieldHeater</li>
+            <li>DankPyon_ShieldHeater_Amboise</li>
+            <li>DankPyon_ShieldHeater_Soren</li>
+            <li>DankPyon_ShieldHeater_Oswin</li>
+            <li>DankPyon_ShieldHeater_Hesse</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_Shield</li>
+        <li>DankPyon_ShieldKite</li>
+        <li>DankPyon_ShieldHeater</li>
+        <li>DankPyon_ShieldHeater_Amboise</li>
+        <li>DankPyon_ShieldHeater_Soren</li>
+        <li>DankPyon_ShieldHeater_Oswin</li>
+        <li>DankPyon_ShieldHeater_Hesse</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_MetalShield>1</pphhyy_Barbarian_MetalShield>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_MetalShieldII</defName>
+    <label>Barbarian Metal Shield</label>
+    <description>A Metal shield looted from the battlefield.</description>
+    <equipmentType>None</equipmentType>
+    <graphicData>
+      <texPath>Shields/Barbarian_MetalShieldII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>100</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>2.0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+      <MoveSpeed>-1.6</MoveSpeed>
+    </equippedStatOffsets>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <comps>
+      <li Class="PawnShields.CompProperties_Shield">
+        <!-- Rendering systems -->
+        <wieldedGraphic>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <texPath>Shields/Barbarian_MetalShieldII</texPath>
+          <drawSize>(1.1, 1.1)</drawSize>
+        </wieldedGraphic>
+        <renderProperties>
+          <!-- Same as defaults in C# -->
+          <northOffset>(-0.25, -0.033, -0.1)</northOffset> <!--horixontal, drawn in front or back, vertical-->
+          <southOffset>(0.25, 0.033, -0.2)</southOffset>
+          <westOffset>(-0.13, -0.053, -0.1)</westOffset>
+          <eastOffset>(0.13, -0.017, -0.1)</eastOffset>
+          <flipRotation>true</flipRotation>
+          <renderWhenPeaceful>false</renderWhenPeaceful>
+        </renderProperties>
+        <!-- Blocking system (Optional???) -->
+        <canBlockRanged>true</canBlockRanged>
+        <canBlockMelee>true</canBlockMelee>
+        <meleeBlockChanceFactor>8.0</meleeBlockChanceFactor>
+        <!-- Default: 1.0 == 100% -->
+        <rangedBlockChanceFactor>0.5</rangedBlockChanceFactor>
+        <!-- Shield damage system (Optional) -->
+        <shieldTakeDamage>true</shieldTakeDamage>
+        <shieldTakeDamageFactor>1.2</shieldTakeDamageFactor>
+        <!-- Auto discard system (Optional) -->
+        <canBeAutoDiscarded>true</canBeAutoDiscarded>
+        <healthAutoDiscardThreshold>0.2</healthAutoDiscardThreshold>
+        <!-- Shield fatigue system (Optional) -->
+        <useFatigue>true</useFatigue>
+        <damageToFatigueFactor>0.005</damageToFatigueFactor>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>side</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>0.8</cooldownTime>
+      </li>
+      <li>
+        <label>buckle</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.0</power>
+        <cooldownTime>1.3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeMetalShieldII</defName>
+    <label>make Round shield</label>
+    <description>Make a Metal shield looted from the battlefield.</description>
+    <jobString>Making Shield.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarian_MetalShield</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarian_MetalShield</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_MetalShieldII>1</pphhyy_Barbarian_MetalShieldII>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb_Quality">
+    <defName>pphhyy_Barbarian_MetalShieldIII</defName>
+    <label>Barbarian Metal Shield</label>
+    <description>A Metal shield looted from the battlefield.</description>
+    <equipmentType>None</equipmentType>
+    <graphicData>
+      <texPath>Shields/Barbarian_MetalShieldIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>100</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Mass>2.0</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+      <MoveSpeed>-1.6</MoveSpeed>
+    </equippedStatOffsets>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <comps>
+      <li Class="PawnShields.CompProperties_Shield">
+        <!-- Rendering systems -->
+        <wieldedGraphic>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <texPath>Shields/Barbarian_MetalShieldIII</texPath>
+          <drawSize>(1.1, 1.1)</drawSize>
+        </wieldedGraphic>
+        <renderProperties>
+          <!-- Same as defaults in C# -->
+          <northOffset>(-0.25, -0.033, -0.1)</northOffset> <!--horixontal, drawn in front or back, vertical-->
+          <southOffset>(0.25, 0.033, -0.2)</southOffset>
+          <westOffset>(-0.13, -0.053, -0.1)</westOffset>
+          <eastOffset>(0.13, -0.017, -0.1)</eastOffset>
+          <flipRotation>true</flipRotation>
+          <renderWhenPeaceful>false</renderWhenPeaceful>
+        </renderProperties>
+        <!-- Blocking system (Optional???) -->
+        <canBlockRanged>true</canBlockRanged>
+        <canBlockMelee>true</canBlockMelee>
+        <meleeBlockChanceFactor>8.0</meleeBlockChanceFactor>
+        <!-- Default: 1.0 == 100% -->
+        <rangedBlockChanceFactor>0.5</rangedBlockChanceFactor>
+        <!-- Shield damage system (Optional) -->
+        <shieldTakeDamage>true</shieldTakeDamage>
+        <shieldTakeDamageFactor>1.2</shieldTakeDamageFactor>
+        <!-- Auto discard system (Optional) -->
+        <canBeAutoDiscarded>true</canBeAutoDiscarded>
+        <healthAutoDiscardThreshold>0.2</healthAutoDiscardThreshold>
+        <!-- Shield fatigue system (Optional) -->
+        <useFatigue>true</useFatigue>
+        <damageToFatigueFactor>0.005</damageToFatigueFactor>
+      </li>
+    </comps>
+    <tools>
+      <li>
+        <label>side</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>0.8</cooldownTime>
+      </li>
+      <li>
+        <label>buckle</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.0</power>
+        <cooldownTime>1.3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeMetalShieldIII</defName>
+    <label>make Metal shield</label>
+    <description>Make a Metal shield looted from the battlefield.</description>
+    <jobString>Making Shield.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarian_MetalShieldII</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarian_MetalShieldII</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_MetalShieldIII>1</pphhyy_Barbarian_MetalShieldIII>
+    </products>
+  </RecipeDef>
+
+</Defs>

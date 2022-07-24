@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="ArmorSmithableBaseBarb" ParentName="ApparelBase" Abstract="True">
+    <smeltable>true</smeltable>
+    <!-- <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker> -->
+  </ThingDef>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_WarlordArmor</defName>
+    <label>Warlord Armor</label>
+    <description>Warlord Armor made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/WarlordArmor/WarlordArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costList>
+        <Steel>120</Steel>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>15</Mass>
+      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <!-- <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags> -->
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/WarlordArmor/WarlordArmor</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <!-- <li>Dunedain_Plate</li> -->
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <!-- <defaultOutfitTags>
+        <li>Arnorian_Plate</li>
+      </defaultOutfitTags> -->
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeWarlordArmor</defName>
+    <label>make Warlord Armor</label>
+    <description>Make a Warlord Armor set made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Apparel_PowerArmor</li>
+            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li> -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Apparel_PowerArmor</li>
+        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li> -->
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_WarlordArmor>1</pphhyy_Barbarian_WarlordArmor>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_WarlordArmorII</defName>
+    <label>Warlord Armor</label>
+    <description>Warlord Armor made from armor and skulls looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Armor/WarlordArmor/WarlordArmorII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>15</Mass>
+      <ArmorRating_Sharp>1.50</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.90</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/WarlordArmor/WarlordArmorII</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeWarlordArmorII</defName>
+    <label>make Warlord Armor</label>
+    <description>Make a Warlord Armor set made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Apparel_PowerArmor</li>
+            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li> -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Apparel_PowerArmor</li>
+        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li> -->
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_WarlordArmorII>1</pphhyy_Barbarian_WarlordArmorII>
+    </products>
+  </RecipeDef>
+
+</Defs>

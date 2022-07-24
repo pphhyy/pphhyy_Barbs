@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="HatMakeableBaseBarbs">
+    <defName>pphhyy_Barbarians_MetalHelm</defName>
+    <label>Metal Helm</label>
+    <description>Metal Helm made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+      <factionPrerequisiteTags>
+        <li>Tribal</li>
+      </factionPrerequisiteTags>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/MetalHelm/MetalHelm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costStuffCount>60</costStuffCount> -->
+    <!-- <costList>
+      <Skull>1</Skull>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.05</SocialImpact>
+      <SuppressionPower>0.5</SuppressionPower>
+    </equippedStatOffsets>
+    <apparel>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/MetalHelm/MetalHelm</wornGraphicPath>
+      <ideoDesireAllowedFactionCategoryTags><li>Tribal</li></ideoDesireAllowedFactionCategoryTags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeMetalHelm</defName>
+    <label>make Metal Helm</label>
+    <description>Make a Metal Helm made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Headgear_GreatHelm</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_Headgear_GreatHelm</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarians_MetalHelm>1</pphhyy_Barbarians_MetalHelm>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="HatMakeableBaseBarbs">
+    <defName>pphhyy_Barbarians_MetalHelmII</defName>
+    <label>Metal Helm II</label>
+    <description>Metal Helm made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+      <factionPrerequisiteTags>
+        <li>Tribal</li>
+      </factionPrerequisiteTags>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/MetalHelm/MetalHelmII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costStuffCount>60</costStuffCount> -->
+    <!-- <costList>
+      <Skull>1</Skull>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.05</SocialImpact>
+      <SuppressionPower>0.5</SuppressionPower>
+    </equippedStatOffsets>
+    <apparel>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/MetalHelm/MetalHelmII</wornGraphicPath>
+      <ideoDesireAllowedFactionCategoryTags><li>Tribal</li></ideoDesireAllowedFactionCategoryTags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeMetalHelmII</defName>
+    <label>make Metal Helm II</label>
+    <description>Make a Metal Helm made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarians_MetalHelm</li>
+            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li> -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarians_MetalHelm</li>
+        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li> -->
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarians_MetalHelmII>1</pphhyy_Barbarians_MetalHelmII>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="HatMakeableBaseBarbs">
+    <defName>pphhyy_Barbarians_MetalHelmIII</defName>
+    <label>Metal Helm III</label>
+    <description>Metal Helm made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+      <factionPrerequisiteTags>
+        <li>Tribal</li>
+      </factionPrerequisiteTags>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/MetalHelm/MetalHelmIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costStuffCount>60</costStuffCount> -->
+    <!-- <costList>
+      <Skull>1</Skull>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.05</SocialImpact>
+      <SuppressionPower>0.5</SuppressionPower>
+    </equippedStatOffsets>
+    <apparel>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/MetalHelm/MetalHelmIII</wornGraphicPath>
+      <ideoDesireAllowedFactionCategoryTags><li>Tribal</li></ideoDesireAllowedFactionCategoryTags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeMetalHelmIII</defName>
+    <label>make Metal Helm III</label>
+    <description>Make a Metal Helm made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarians_MetalHelmII</li>
+            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li> -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarians_MetalHelmII</li>
+        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li> -->
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarians_MetalHelmIII>1</pphhyy_Barbarians_MetalHelmIII>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="HatMakeableBaseBarbs">
+    <defName>pphhyy_Barbarians_SpikedCap</defName>
+    <label>Spiked Cap</label>
+    <description>Spiked Cap made from armor looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Armor/SpikedCap/SpikedCap</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.05</SocialImpact>
+      <SuppressionPower>0.5</SuppressionPower>
+    </equippedStatOffsets>
+    <apparel>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/SpikedCap/SpikedCap</wornGraphicPath>
+      <ideoDesireAllowedFactionCategoryTags><li>Tribal</li></ideoDesireAllowedFactionCategoryTags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeSpikedCap</defName>
+    <label>make Spiked Cap</label>
+    <description>Make a Spiked Cap made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Headgear_GreatHelm</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_Headgear_GreatHelm</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarians_SpikedCap>1</pphhyy_Barbarians_SpikedCap>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="HatMakeableBaseBarbs">
+    <defName>pphhyy_Barbarians_SpikedCapII</defName>
+    <label>Spiked Cap II</label>
+    <description>Spiked Cap made from armor looted on the battlefield.</description>
+    <graphicData>
+      <texPath>Armor/SpikedCap/SpikedCapII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.05</SocialImpact>
+      <SuppressionPower>0.5</SuppressionPower>
+    </equippedStatOffsets>
+    <apparel>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/SpikedCap/SpikedCapII</wornGraphicPath>
+      <ideoDesireAllowedFactionCategoryTags><li>Tribal</li></ideoDesireAllowedFactionCategoryTags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeSpikedCapII</defName>
+    <label>make Spiked Cap II</label>
+    <description>Make a Spiked Cap made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Headgear_GreatHelm</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_Headgear_GreatHelm</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarians_SpikedCapII>1</pphhyy_Barbarians_SpikedCapII>
+    </products>
+  </RecipeDef>
+
+</Defs>

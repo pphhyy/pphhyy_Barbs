@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef Name="ApparelMakeableBaseBarbs" ParentName="ApparelBase" Abstract="True">
+    <!-- <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <defaultIngredientFilter>
+        <categories>
+          <li>Root</li>
+        </categories>
+        <disallowedThingDefs>
+          <li>Gold</li>
+          <li>Silver</li>
+          <li>Plasteel</li>
+          <li>Jade</li>
+          <li>Uranium</li>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
+    </recipeMaker> -->
+  </ThingDef>
+
+  <ThingDef Name="HatMakeableBaseBarbs" ParentName="ApparelMakeableBaseBarbs" Abstract="True">
+    <thingCategories>
+      <li>Headgear</li>
+    </thingCategories>
+  </ThingDef>
+
+<ThingDef ParentName="HatMakeableBaseBarbs">
+    <defName>pphhyy_Barbarians_WarlordHelm</defName>
+    <label>Warlord Helm</label>
+    <description>Warlord helm made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>1</Crafting>
+      </skillRequirements>
+      <factionPrerequisiteTags>
+        <li>Tribal</li>
+      </factionPrerequisiteTags>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/Warlord/WarlordHelm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costStuffCount>60</costStuffCount> -->
+    <!-- <costList>
+      <Skull>1</Skull>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.05</SocialImpact>
+      <SuppressionPower>0.5</SuppressionPower>
+    </equippedStatOffsets>
+    <apparel>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/Warlord/WarlordHelm</wornGraphicPath>
+      <ideoDesireAllowedFactionCategoryTags><li>Tribal</li></ideoDesireAllowedFactionCategoryTags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeWarlordHelm</defName>
+    <label>make Warlord Helm</label>
+    <description>Make a Warlord helm made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Headgear_GreatHelm</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_Headgear_GreatHelm</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarians_WarlordHelm>1</pphhyy_Barbarians_WarlordHelm>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="HatMakeableBaseBarbs">
+    <defName>pphhyy_Barbarians_WarlordHelmII</defName>
+    <label>Warlord Helm II</label>
+    <description>Terrifying Horned helm Worn by barbarian Warlords.</description>
+    <graphicData>
+      <texPath>Armor/Warlord/WarlordHelmII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.15</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.05</SocialImpact>
+      <SuppressionPower>0.5</SuppressionPower>
+    </equippedStatOffsets>
+    <apparel>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/Warlord/WarlordHelmII</wornGraphicPath>
+      <ideoDesireAllowedFactionCategoryTags><li>Tribal</li></ideoDesireAllowedFactionCategoryTags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeWarlordHelmII</defName>
+    <label>make Warlord Helm II</label>
+    <description>Make a Warlord helm made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarians_WarlordHelm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarians_WarlordHelm</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarians_WarlordHelmII>1</pphhyy_Barbarians_WarlordHelmII>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="HatMakeableBaseBarbs">
+    <defName>pphhyy_Barbarians_WarlordHelmIII</defName>
+    <label>Warlord Helm III</label>
+    <description>Terrifying Horned helm Worn by barbarian Warlords.</description>
+    <graphicData>
+      <texPath>Armor/Warlord/WarlordHelmIII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <uiIconScale>1.15</uiIconScale>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>1.5</Mass>
+      <Flammability>0.4</Flammability>
+      <ArmorRating_Sharp>1.30</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.54</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+      <EquipDelay>1.0</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.05</SocialImpact>
+      <SuppressionPower>0.5</SuppressionPower>
+    </equippedStatOffsets>
+    <apparel>
+      <useWornGraphicMask>true</useWornGraphicMask>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/Warlord/WarlordHelmIII</wornGraphicPath>
+      <ideoDesireAllowedFactionCategoryTags><li>Tribal</li></ideoDesireAllowedFactionCategoryTags>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeWarlordHelmIII</defName>
+    <label>make Warlord Helm III</label>
+    <description>Make a Warlord helm made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarians_WarlordHelmII</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarians_WarlordHelmII</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarians_WarlordHelmIII>1</pphhyy_Barbarians_WarlordHelmIII>
+    </products>
+  </RecipeDef>
+
+</Defs>
