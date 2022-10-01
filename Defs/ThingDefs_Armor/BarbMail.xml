@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_Mail</defName>
+    <label>Mail</label>
+    <description>Mail made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/BarbMail/BarbMailI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costList>
+        <Steel>120</Steel>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>15</Mass>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <!-- <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags> -->
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/BarbMail/BarbMailI</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <!-- <defaultOutfitTags>
+        <li>Arnorian_Plate</li>
+      </defaultOutfitTags> -->
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeMail</defName>
+    <label>make Mail</label>
+    <description>Make a Mail set made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Apparel_Light_Lamellar</li>
+            <li>DankPyon_Apparel_Padded_Leather</li>
+            <li>Dankpyon_Apparel_Gambeson</li>
+            <li>DankPyon_Apparel_Hauberk</li>
+            <li>DankPyon_Apparel_Heavy_Hauberk</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk1c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk2c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk3c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk4c</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+            <li>DankPyon_Apparel_Light_Lamellar</li>
+            <li>DankPyon_Apparel_Padded_Leather</li>
+            <li>Dankpyon_Apparel_Gambeson</li>
+            <li>DankPyon_Apparel_Hauberk</li>
+            <li>DankPyon_Apparel_Heavy_Hauberk</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk1c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk2c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk3c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk4c</li>
+            <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_Mail>1</pphhyy_Barbarian_Mail>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_MailII</defName>
+    <label>Mail II</label>
+    <description>Mail made from armor and skulls looted on the battlefield.</description>
+    <!-- <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/BarbMail/BarbMailII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <!-- <costList>
+        <Steel>120</Steel>
+    </costList> -->
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>15</Mass>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>15</EquipDelay>
+    </statBases>
+    <!-- <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+      <li>RewardStandardQualitySuper</li>
+    </thingSetMakerTags> -->
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/BarbMail/BarbMailII</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <!-- <defaultOutfitTags>
+        <li>Arnorian_Plate</li>
+      </defaultOutfitTags> -->
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeMailII</defName>
+    <label>make Mail II</label>
+    <description>Make a Mail set made from armor and skulls looted on the battlefield.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_Apparel_Light_Lamellar</li>
+            <li>DankPyon_Apparel_Padded_Leather</li>
+            <li>Dankpyon_Apparel_Gambeson</li>
+            <li>DankPyon_Apparel_Hauberk</li>
+            <li>DankPyon_Apparel_Heavy_Hauberk</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk1c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk2c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk3c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk4c</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+            <li>DankPyon_Apparel_Light_Lamellar</li>
+            <li>DankPyon_Apparel_Padded_Leather</li>
+            <li>Dankpyon_Apparel_Gambeson</li>
+            <li>DankPyon_Apparel_Hauberk</li>
+            <li>DankPyon_Apparel_Heavy_Hauberk</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk1c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk2c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk3c</li>
+            <li>DankPyon_Apparel_Heraldic_Hauberk4c</li>
+            <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_MailII>1</pphhyy_Barbarian_MailII>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+</Defs>

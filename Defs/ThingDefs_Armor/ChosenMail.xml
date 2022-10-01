@@ -30,8 +30,8 @@
       <WorkToMake>1000</WorkToMake>
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>15</Mass>
-      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
       <ArmorRating_Heat>0.15</ArmorRating_Heat>
       <Insulation_Cold>1</Insulation_Cold>
       <EquipDelay>15</EquipDelay>
@@ -59,7 +59,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-        <!-- <li>Dunedain_Plate</li> -->
+        <li>pphhyy_Barbarian_BarbChosenApparel</li>
       </tags>
       <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
       <!-- <defaultOutfitTags>
@@ -85,13 +85,13 @@
         <filter>
           <thingDefs>
             <li>Apparel_PowerArmor</li>
-            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-            <li>Apparel_ArmorHelmetCataphract</li>
-            <li>Apparel_ArmorHelmetRecon</li>
-            <li>Apparel_PowerArmorHelmet</li> -->
+            <li>DankPyon_Apparel_FullPlateGilded</li>
+            <li>DankPyon_Apparel_Brigandine</li>
+            <li>DankPyon_Apparel_Breast_Plate</li>
+            <li>DankPyon_Apparel_FullPlate</li>
+            <li>Apparel_ArmorCataphract</li>
+            <li>Apparel_ArmorRecon</li>
+            <li>Apparel_PlateArmor</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -107,15 +107,15 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>Apparel_PowerArmor</li>
-        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-        <li>Apparel_ArmorHelmetCataphract</li>
-        <li>Apparel_ArmorHelmetRecon</li>
-        <li>Apparel_PowerArmorHelmet</li> -->
-        <li>Skull</li>
+            <li>Apparel_PowerArmor</li>
+            <li>DankPyon_Apparel_FullPlateGilded</li>
+            <li>DankPyon_Apparel_Brigandine</li>
+            <li>DankPyon_Apparel_Breast_Plate</li>
+            <li>DankPyon_Apparel_FullPlate</li>
+            <li>Apparel_ArmorCataphract</li>
+            <li>Apparel_ArmorRecon</li>
+            <li>Apparel_PlateArmor</li>
+            <li>Skull</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -182,7 +182,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-        <!-- <li>Dunedain_Plate</li> -->
+        <li>pphhyy_Barbarian_BarbChosenApparel</li>
       </tags>
       <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
       <!-- <defaultOutfitTags>
@@ -207,7 +207,7 @@
       <li>
         <filter>
           <thingDefs>
-            <li>Apparel_PowerArmor</li>
+            <li>pphhyy_Barbarian_ChosenMail</li>
             <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
             <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
             <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
@@ -225,12 +225,12 @@
             <li>Skull</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>2</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>Apparel_PowerArmor</li>
+        <li>pphhyy_Barbarian_ChosenMail</li>
         <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
         <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
         <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>

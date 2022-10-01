@@ -32,8 +32,8 @@
       <WorkToMake>1000</WorkToMake>
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>15</Mass>
-      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
       <ArmorRating_Heat>0.5</ArmorRating_Heat>
       <Insulation_Cold>10</Insulation_Cold>
       <EquipDelay>15</EquipDelay>
@@ -43,6 +43,9 @@
       <SuppressionPower>0.5</SuppressionPower>
     </equippedStatOffsets>
     <apparel>
+      <tags>
+        <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+      </tags>
       <useWornGraphicMask>true</useWornGraphicMask>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
@@ -73,8 +76,8 @@
       <WorkToMake>1000</WorkToMake>
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>15</Mass>
-      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
       <ArmorRating_Heat>0.5</ArmorRating_Heat>
       <Insulation_Cold>10</Insulation_Cold>
       <EquipDelay>15</EquipDelay>
@@ -84,6 +87,9 @@
       <SuppressionPower>0.5</SuppressionPower>
     </equippedStatOffsets>
     <apparel>
+      <tags>
+        <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+      </tags>
       <useWornGraphicMask>true</useWornGraphicMask>
       <countsAsClothingForNudity>false</countsAsClothingForNudity>
       <bodyPartGroups>
@@ -151,7 +157,7 @@
 
   <ThingDef ParentName="HatMakeableBaseBarbs">
     <defName>pphhyy_Barbarian_BoneHelmIII</defName>
-    <label>Bone Helm II</label>
+    <label>Bone Helm III</label>
     <description>Bone Helm made from Bones and the skulls of slain enemies.</description>
     <graphicData>
       <texPath>Armor/BoneHelm/BoneHelmIII</texPath>
@@ -164,8 +170,8 @@
       <WorkToMake>1000</WorkToMake>
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>15</Mass>
-      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
       <ArmorRating_Heat>0.5</ArmorRating_Heat>
       <Insulation_Cold>10</Insulation_Cold>
       <EquipDelay>15</EquipDelay>
@@ -187,6 +193,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 
@@ -272,7 +281,7 @@
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToMake>1800</WorkToMake>
       <Mass>0.5</Mass>
-      <StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
       <StuffEffectMultiplierInsulation_Cold>0.55</StuffEffectMultiplierInsulation_Cold>
       <StuffEffectMultiplierInsulation_Heat>0.55</StuffEffectMultiplierInsulation_Heat>
       <EquipDelay>1.5</EquipDelay>
@@ -294,6 +303,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 
@@ -312,8 +324,8 @@
       <WorkToMake>1000</WorkToMake>
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>15</Mass>
-      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
       <ArmorRating_Heat>0.5</ArmorRating_Heat>
       <Insulation_Cold>10</Insulation_Cold>
       <EquipDelay>15</EquipDelay>
@@ -335,6 +347,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 
@@ -433,6 +448,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbThrallApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 

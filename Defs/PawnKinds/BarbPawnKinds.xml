@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ==========[Base]========== -->
+	<PawnKindDef Name="pphhyy_Barbarian_NonPlayerKindBase" Abstract="True">
+		<maxGenerationAge>60</maxGenerationAge>
+		<chemicalAddictionChance>0.05</chemicalAddictionChance>
+		<invNutrition>2</invNutrition>
+		<invFoodDef>Pemmican</invFoodDef>
+        <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<apparelAllowHeadgearChance>0.8</apparelAllowHeadgearChance>
+		<!--
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+			  <li>ESCP_DunmerAshlanderBackstory</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		-->
+	</PawnKindDef>
+
+	<!-- ==========[Thrall]========== -->
+
+	<PawnKindDef ParentName="pphhyy_Barbarian_NonPlayerKindBase" Name="pphhyy_Barbarian_ThrallBase" Abstract="True">
+		<label>Thrall</label>
+		<combatPower>40</combatPower>
+		<invNutrition>0</invNutrition>
+		<itemQuality>Poor</itemQuality>
+		<gearHealthRange>0.2~1.1</gearHealthRange>
+		<apparelMoney>50~350</apparelMoney>
+		<weaponMoney>80~200</weaponMoney>
+		<initialWillRange>0~1</initialWillRange>
+		<initialResistanceRange>10~17</initialResistanceRange>
+	</PawnKindDef>
+
+	<!-- ==========[Marauder]========== -->
+
+	<PawnKindDef ParentName="pphhyy_Barbarian_NonPlayerKindBase" Name="pphhyy_Barbarian_MarauderBase" Abstract="True">
+		<label>Marauder</label>
+		<combatPower>80</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<gearHealthRange>0.5~1.8</gearHealthRange>
+		<apparelMoney>180~350</apparelMoney>
+		<weaponMoney>80~2000</weaponMoney>
+		<!-- <disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits> -->
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>17~27</initialResistanceRange>
+	</PawnKindDef>
+
+	<!-- ==========[Basic, Trader]========== -->
+	<!-- <PawnKindDef ParentName="pphhyy_Barbarian_NonPlayerKindBase" Name="pphhyy_Barbarian_TraderBase" Abstract="True">
+		<label>trader</label>
+		<trader>true</trader>
+		<combatPower>60</combatPower>
+		<gearHealthRange>0.5~1.8</gearHealthRange>
+		<apparelMoney>200~300</apparelMoney>
+		<weaponMoney>100~100</weaponMoney>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>10~16</initialResistanceRange>
+	</PawnKindDef> -->
+
+	<!-- ==========[Warrior]========== -->
+	<PawnKindDef ParentName="pphhyy_Barbarian_NonPlayerKindBase" Name="pphhyy_Barbarian_WarriorBase" Abstract="True">
+		<label>Warrior</label>
+		<combatPower>120</combatPower>
+		<canBeSapper>true</canBeSapper>
+		<apparelMoney>200~550</apparelMoney>
+		<!-- <apparelRequired>
+			<li>Mashed_Lynian_Apparel_PurrserkerHelmet</li>
+		</apparelRequired> -->
+		<weaponMoney>300~300</weaponMoney>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>13~20</initialResistanceRange>
+	</PawnKindDef>
+
+	<!-- ==========[Chosen]========== -->
+
+	<PawnKindDef ParentName="pphhyy_Barbarian_NonPlayerKindBase" Name="pphhyy_Barbarian_ChosenBase" Abstract="True">
+		<label>Chosen</label>
+		<combatPower>120</combatPower>
+		<canBeSapper>true</canBeSapper>
+		<apparelMoney>200~550</apparelMoney>
+		<!-- <apparelRequired>
+			<li>Mashed_Lynian_Apparel_PurrserkerHelmet</li>
+		</apparelRequired> -->
+		<weaponMoney>300~300</weaponMoney>
+		<initialWillRange>2~4</initialWillRange>
+		<initialResistanceRange>13~20</initialResistanceRange>
+	</PawnKindDef>
+
+	<!-- ==========[Warlord]========== -->
+    
+	<PawnKindDef ParentName="pphhyy_Barbarian_NonPlayerKindBase" Name="pphhyy_Barbarian_WarlordBase" Abstract="True">
+		<combatPower>85</combatPower>
+		<baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+		<minGenerationAge>30</minGenerationAge>
+		<maxGenerationAge>999</maxGenerationAge>
+		<itemQuality>Poor</itemQuality>
+		<factionLeader>true</factionLeader>
+		<canBeSapper>true</canBeSapper>
+		<apparelMoney>450~2000</apparelMoney>
+		<!-- <apparelRequired>
+			<li>Mashed_Lynian_Apparel_PurrserkerHelmet</li>
+			<li>Mashed_Lynian_Apparel_PurrserkerArmour</li>
+			<li>Mashed_Lynian_Apparel_PurrserkerBackPack</li>
+		</apparelRequired> -->
+		<weaponMoney>500~1000</weaponMoney>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>19~30</initialResistanceRange>
+	</PawnKindDef>
+
+
+    <!-- weapons
+    pphhyy_Barbarian_BarbThrallWeapon
+    pphhyy_Barbarian_BarbThrallWeaponHeavy
+    pphhyy_Barbarian_BarbThrown
+    pphhyy_Barbarian_BarbNormalWeapon
+    pphhyy_Barbarian_BarbBigWeapon -->
+
+
+    <!-- apparel
+    pphhyy_Barbarian_BarbThrallApparel
+    pphhyy_Barbarian_BarbChainApparel
+    pphhyy_Barbarian_BarbLeatherApparel
+    pphhyy_Barbarian_BarbMarauderApparel
+    pphhyy_Barbarian_BarbWarriorApparel
+    pphhyy_Barbarian_BarbWarlordApparel -->
+
+
+    <!-- Shields
+    pphhyy_Barbarian_BarbRoundShield 1 to 3
+    pphhyy_Barbarian_BarbTallShield
+    pphhyy_Barbarian_BarbMetalShield -->
+
+	<!-- ==========[Basic, Thrall]========== -->
+	<PawnKindDef ParentName="pphhyy_Barbarian_ThrallBase">
+		<defName>pphhyy_Barbarian_Thrall</defName>
+		<race>Human</race>
+		<defaultFactionType>pphhyy_Barbarian_NonPlayerBarbTribe</defaultFactionType>
+		<apparelTags>
+			<li>pphhyy_Barbarian_BarbThrallApparel</li>
+		</apparelTags>
+		<weaponTags>
+            <li>pphhyy_Barbarian_BarbThrown</li>
+		</weaponTags>
+        <modExtensions>
+          <li Class="PawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>0</min>
+              <max>2000</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>pphhyy_Barbarian_BarbRoundShield1</li>
+            </shieldTags>
+          </li>
+        </modExtensions>
+	</PawnKindDef>
+	<!-- ==========[Basic, Marauder Shield]========== -->
+	<PawnKindDef ParentName="pphhyy_Barbarian_MarauderBase">
+		<defName>pphhyy_Barbarian_MarauderShield</defName>
+		<race>Human</race>
+		<defaultFactionType>pphhyy_Barbarian_NonPlayerBarbTribe</defaultFactionType>
+		<apparelTags>
+			<li>pphhyy_Barbarian_BarbThrallApparel</li>
+            <li>pphhyy_Barbarian_BarbLeatherApparel</li>
+            <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+		</apparelTags>
+		<weaponTags>
+			<li>pphhyy_Barbarian_BarbThrallWeapon</li>
+            <li>pphhyy_Barbarian_BarbThrown</li>
+		</weaponTags>
+        <modExtensions>
+          <li Class="PawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>0</min>
+              <max>2000</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>pphhyy_Barbarian_BarbRoundShield1</li>
+            </shieldTags>
+          </li>
+        </modExtensions>
+	</PawnKindDef>
+
+    <PawnKindDef ParentName="pphhyy_Barbarian_MarauderBase">
+		<defName>pphhyy_Barbarian_Marauder</defName>
+		<race>Human</race>
+		<defaultFactionType>pphhyy_Barbarian_NonPlayerBarbTribe</defaultFactionType>
+		<apparelTags>
+			<li>pphhyy_Barbarian_BarbThrallApparel</li>
+            <li>pphhyy_Barbarian_BarbLeatherApparel</li>
+            <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+		</apparelTags>
+		<weaponTags>
+            <li>pphhyy_Barbarian_BarbThrallWeaponHeavy</li>
+			<li>pphhyy_Barbarian_BarbThrallWeapon</li>
+            <li>pphhyy_Barbarian_BarbThrown</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ==========[Basic, Trader]========== -->
+	<!-- <PawnKindDef ParentName="Mashed_Lynian_TraderBase">
+		<defName>Mashed_Lynian_FelyneTrader</defName>
+		<race>Mashed_Lynian_FelyneRace</race>
+		<defaultFactionType>Mashed_Lynian_NonPlayerFelyneTribe</defaultFactionType>
+		<apparelTags>
+			<li>Mashed_Lynian_FelyneTribal</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>Mashed_Lynian_Apparel_AcornBackpack</li>
+		</apparelRequired>
+		<weaponTags>
+			<li>Mashed_Lynian_FelyneTribal</li>
+		</weaponTags>
+	</PawnKindDef> -->
+	<!-- ==========[Advanced, Warrior]========== -->
+	<PawnKindDef ParentName="pphhyy_Barbarian_WarriorBase">
+		<defName>pphhyy_Barbarian_WarriorShield</defName>
+		<race>Human</race>
+		<defaultFactionType>pphhyy_Barbarian_NonPlayerBarbTribe</defaultFactionType>
+		<apparelTags> 
+			<li>pphhyy_Barbarian_BarbChainApparel</li>
+            <li>pphhyy_Barbarian_BarbLeatherApparel</li>
+            <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+		</apparelTags>
+		<weaponTags>
+			<li>pphhyy_Barbarian_BarbThrown</li>
+            <li>pphhyy_Barbarian_BarbNormalWeapon</li>
+		</weaponTags>
+        <modExtensions>
+          <li Class="PawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>0</min>
+              <max>2000</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>pphhyy_Barbarian_BarbRoundShield1</li>
+              <li>pphhyy_Barbarian_BarbRoundShield2</li>
+              <li>pphhyy_Barbarian_BarbTallShield1</li>
+            </shieldTags>
+          </li>
+        </modExtensions>
+	</PawnKindDef>
+
+    <PawnKindDef ParentName="pphhyy_Barbarian_WarriorBase">
+		<defName>pphhyy_Barbarian_Warrior</defName>
+		<race>Human</race>
+		<defaultFactionType>pphhyy_Barbarian_NonPlayerBarbTribe</defaultFactionType>
+		<apparelTags>
+			<li>pphhyy_Barbarian_BarbChainApparel</li>
+            <li>pphhyy_Barbarian_BarbLeatherApparel</li>
+            <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+		</apparelTags>
+		<weaponTags>
+            <li>pphhyy_Barbarian_BarbThrallWeaponHeavy</li>
+		</weaponTags>
+	</PawnKindDef>
+	<!-- ==========[Chosen]========== -->
+	<PawnKindDef ParentName="pphhyy_Barbarian_ChosenBase">
+		<defName>pphhyy_Barbarian_ChosenShield</defName>
+		<race>Human</race>
+		<defaultFactionType>pphhyy_Barbarian_NonPlayerBarbTribe</defaultFactionType>
+		<apparelTags> 
+			<li>pphhyy_Barbarian_BarbChainApparel</li>
+            <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+            <li>pphhyy_Barbarian_BarbLeatherApparel</li>
+            <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+            <li>pphhyy_Barbarian_BarbChosenApparel</li>
+		</apparelTags>
+		<weaponTags>
+			<li>pphhyy_Barbarian_BarbThrown</li>
+            <li>pphhyy_Barbarian_BarbNormalWeapon</li>
+		</weaponTags>
+        <modExtensions>
+          <li Class="PawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>0</min>
+              <max>2000</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>pphhyy_Barbarian_BarbRoundShield1</li>
+              <li>pphhyy_Barbarian_BarbRoundShield2</li>
+              <li>pphhyy_Barbarian_BarbRoundShield3</li>
+              <li>pphhyy_Barbarian_BarbTallShield1</li>
+              <li>pphhyy_Barbarian_BarbTallShield2</li>
+              <li>pphhyy_Barbarian_BarbTallShield3</li>
+              <li>pphhyy_Barbarian_BarbMetalShield1</li>
+            </shieldTags>
+          </li>
+        </modExtensions>
+	</PawnKindDef>
+
+    <PawnKindDef ParentName="pphhyy_Barbarian_ChosenBase">
+		<defName>pphhyy_Barbarian_Chosen</defName>
+		<race>Human</race>
+		<defaultFactionType>pphhyy_Barbarian_NonPlayerBarbTribe</defaultFactionType>
+		<apparelTags>
+			<li>pphhyy_Barbarian_BarbChainApparel</li>
+            <li>pphhyy_Barbarian_BarbLeatherApparel</li>
+            <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+            <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+            <li>pphhyy_Barbarian_BarbChosenApparel</li>
+		</apparelTags>
+		<weaponTags>
+            <li>pphhyy_Barbarian_BarbThrallWeaponHeavy</li>
+            <li>pphhyy_Barbarian_BarbBigWeapon</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<!-- ==========[Barbarian Warlord]========== -->
+
+	<PawnKindDef ParentName="pphhyy_Barbarian_WarlordBase">
+		<defName>pphhyy_Barbarian_WarlordFactionLeader</defName>
+		<race>Human</race>
+		<defaultFactionType>pphhyy_Barbarian_NonPlayerBarbTribe</defaultFactionType>
+		<apparelTags>
+            <li>pphhyy_Barbarian_BarbChainApparel</li>
+			<li>pphhyy_Barbarian_BarbWarlordApparel</li>
+		</apparelTags>
+        <weaponTags>
+            <li>pphhyy_Barbarian_BarbNormalWeapon</li>
+            <li>pphhyy_Barbarian_BarbBigWeapon</li>
+		</weaponTags>
+        <modExtensions>
+          <li Class="PawnShields.ShieldPawnGeneratorProperties">
+            <shieldMoney>
+              <min>0</min>
+              <max>2000</max>
+            </shieldMoney>
+            <shieldTags>
+              <li>pphhyy_Barbarian_BarbMetalShield1</li>
+              <li>pphhyy_Barbarian_BarbMetalShield2</li>
+              <li>pphhyy_Barbarian_BarbMetalShield3</li>
+            </shieldTags>
+          </li>
+        </modExtensions>
+	</PawnKindDef>
+	
+</Defs>

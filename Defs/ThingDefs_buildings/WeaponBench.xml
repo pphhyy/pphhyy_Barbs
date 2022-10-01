@@ -55,6 +55,8 @@
        <li>pphhyy_Barbarian_MakeRustedSkullMace</li>
        <li>pphhyy_Barbarian_MakeRustedGreatSkullMace</li>
        <li>pphhyy_Barbarian_MakeRoundShield</li>
+       <li>pphhyy_Barbarian_MakeRustedJavalin</li>
+       <li>pphhyy_Barbarian_MakeRustedThrowingAxe</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>

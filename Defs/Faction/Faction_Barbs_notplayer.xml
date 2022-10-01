@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--__________ Tutorial Faction __________-->
+
+    <!-- Non Player Factions -->
+
+  <!-- Note that you dont need to make this a base if not wanted, if you want the FactionBase to be the parent and this def to be you faction change the first line to -   <FactionDef ParentName="FactionBase"> and add in <defName>YourFactionName</defName> under that line -->
+  <FactionDef ParentName="FactionBase" Name="pphhyy_Barbarians_factionNonPlayer" Abstract="True"> 
+    <!-- Name of what your pawns inside the faction are called -->
+    <pawnSingular>Barbarian</pawnSingular>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>50</configurationListOrderPriority>
+    <!-- Plural name of pawns within the faction -->
+    <pawnsPlural>Barbarians</pawnsPlural>
+    <!-- The catagory your faction is tagged at -->
+    <categoryTag>Tribal</categoryTag>
+    <!-- List order priority is for the order it appears in faction selection during world gen. -->
+    <listOrderPriority>30</listOrderPriority>
+    <!-- how many towns will pop up at game start -->
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <!-- The amount of factions that will spawn at game start -->
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <!-- Can make randomly is probably for if the faction can be selected for stuff like gathering sites. Which create a temporary faction -->
+    <canMakeRandomly>true</canMakeRandomly>
+    <!-- Can your faction siege colonies? -->
+    <canSiege>true</canSiege>
+    <!-- Can your faction stage attacks on colonies? -->
+    <canStageAttacks>true</canStageAttacks>
+    <!-- Title of factions leader -->
+    <leaderTitle>War Lord</leaderTitle>
+    <!-- The Icon that shows your faction on the world map -->
+    <factionIconPath>FactionIcons/barbfactionicon</factionIconPath>
+    <!-- Tech level you facton is at -->
+    <techLevel>Medieval</techLevel>
+    <!-- Names your faction can draw from (look at the rulepack namer template for more info) -->
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <!-- Names your settlment can draw from (look at the rulepack namer template for more info) -->
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <!-- Allowed cultures of your faction -->
+    <allowedCultures><li>Rustican</li></allowedCultures>
+    <!-- memes your faction can not use (Ideology) -->
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <!-- The commonality of the listed origin your faction will pull from, the higher weight the greater chance that origin will be chosen -->
+    <structureMemeWeights>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
+      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
+      <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+    </structureMemeWeights>
+    <!-- What backstory catagories your faction will pull from -->
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+        <!-- How common it is to see this backstory within your faction -->
+        <commonality>1</commonality>
+      </li>
+    </backstoryFilters>
+    <!-- Varriation of genetic apperance, factions with low genetic varriance will have skin color more clustered together (thansk to Jamaican Castle for that) -->
+    <geneticVariance>1</geneticVariance>
+    <!-- Types of caravans your faction will have -->
+    <caravanTraderKinds>
+      <!-- <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+      <li>Caravan_Outlander_PirateMerchant</li> -->
+    </caravanTraderKinds>
+    <!-- Kinds of visitors your faction will have -->
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <!-- Temperature range at wich kind caravans will arrive -->
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, standard mix -->
+        <!-- KindDef to determin how the pawn group is used, ie combat, settlement, trade etc -->
+        <kindDef>Combat</kindDef>
+        <options>
+          <!-- Name of pawnkinds within the group (look at pawnkind template for more information) -->
+          <pphhyy_Barbarian_Thrall>10</pphhyy_Barbarian_Thrall>
+          <pphhyy_Barbarian_MarauderShield>10</pphhyy_Barbarian_MarauderShield>
+          <pphhyy_Barbarian_Marauder>3</pphhyy_Barbarian_Marauder>
+          <pphhyy_Barbarian_WarriorShield>7</pphhyy_Barbarian_WarriorShield>
+          <pphhyy_Barbarian_Warrior>2</pphhyy_Barbarian_Warrior>
+          <pphhyy_Barbarian_ChosenShield>4</pphhyy_Barbarian_ChosenShield>
+          <pphhyy_Barbarian_Chosen>2</pphhyy_Barbarian_Chosen>
+          <pphhyy_Barbarian_WarlordFactionLeader>1</pphhyy_Barbarian_WarlordFactionLeader>
+        </options>
+      </li>
+      <!-- <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Villager>20</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Town_Councilman>10</Town_Councilman>
+        </options>
+      </li> -->
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Town_Trader>1</Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <pphhyy_Barbarian_Thrall>3</pphhyy_Barbarian_Thrall>
+          <!-- <Town_Guard>10</Town_Guard>
+          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+          <Mercenary_Slasher>7</Mercenary_Slasher>
+          <Mercenary_Gunner>10</Mercenary_Gunner>
+          <Mercenary_Elite>10</Mercenary_Elite> -->
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <pphhyy_Barbarian_Thrall>10</pphhyy_Barbarian_Thrall>
+          <pphhyy_Barbarian_WarlordFactionLeader>1</pphhyy_Barbarian_WarlordFactionLeader>
+          <!-- <Town_Guard>10</Town_Guard>
+          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+          <Mercenary_Slasher>7</Mercenary_Slasher>
+          <Mercenary_Gunner>10</Mercenary_Gunner>
+          <Mercenary_Elite>10</Mercenary_Elite>
+          <Town_Councilman>10</Town_Councilman> -->
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Miner>1</Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Hunter>1</Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Logger>1</Logger>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Farmer>1</Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <!-- Texture path for settlements on world map -->
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+  </FactionDef>
+
+  <FactionDef ParentName="pphhyy_Barbarians_factionNonPlayer"> 
+        <defName>pphhyy_Barbarian_NonPlayerBarbTribe</defName>
+        <naturalEnemy>true</naturalEnemy>
+        <label>Barbarian tribe</label>
+        <description>...</description>
+        <colorSpectrum>
+            <li>(204, 75, 75)</li>
+        </colorSpectrum>
+  </FactionDef> 
+
+</Defs>

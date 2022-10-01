@@ -29,12 +29,12 @@
     <statBases>
       <WorkToMake>1000</WorkToMake>
       <MaxHitPoints>300</MaxHitPoints>
-      <Mass>15</Mass>
-      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <Mass>10</Mass>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
       <ArmorRating_Heat>0.5</ArmorRating_Heat>
       <Insulation_Cold>10</Insulation_Cold>
-      <EquipDelay>15</EquipDelay>
+      <EquipDelay>5</EquipDelay>
     </statBases>
     <!-- <thingSetMakerTags>
       <li>RewardStandardLowFreq</li>
@@ -57,9 +57,10 @@
       <wornGraphicPath>Armor/BoneArmor/BoneArmor</wornGraphicPath>
       <layers>
         <li>Shell</li>
+        <li>Middle</li>
       </layers>
       <tags>
-        <!-- <li>Dunedain_Plate</li> -->
+        <li>pphhyy_Barbarian_BarbMarauderApparel</li>
       </tags>
       <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
       <!-- <defaultOutfitTags>
@@ -152,12 +153,12 @@
     <statBases>
       <WorkToMake>1000</WorkToMake>
       <MaxHitPoints>300</MaxHitPoints>
-      <Mass>15</Mass>
-      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <Mass>10</Mass>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
       <ArmorRating_Heat>0.15</ArmorRating_Heat>
       <Insulation_Cold>1</Insulation_Cold>
-      <EquipDelay>15</EquipDelay>
+      <EquipDelay>5</EquipDelay>
     </statBases>
     <!-- <thingSetMakerTags>
       <li>RewardStandardLowFreq</li>
@@ -180,9 +181,10 @@
       <wornGraphicPath>Armor/BoneArmor/BoneArmorII</wornGraphicPath>
       <layers>
         <li>Shell</li>
+        <li>Middle</li>
       </layers>
       <tags>
-        <!-- <li>Dunedain_Plate</li> -->
+        <li>pphhyy_Barbarian_BarbMarauderApparel</li>
       </tags>
       <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
       <!-- <defaultOutfitTags>
@@ -275,12 +277,12 @@
     <statBases>
       <WorkToMake>1000</WorkToMake>
       <MaxHitPoints>300</MaxHitPoints>
-      <Mass>15</Mass>
-      <ArmorRating_Sharp>1.20</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+      <Mass>10</Mass>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.60</ArmorRating_Blunt>
       <ArmorRating_Heat>0.15</ArmorRating_Heat>
       <Insulation_Cold>1</Insulation_Cold>
-      <EquipDelay>15</EquipDelay>
+      <EquipDelay>5</EquipDelay>
     </statBases>
     <!-- <thingSetMakerTags>
       <li>RewardStandardLowFreq</li>
@@ -303,9 +305,10 @@
       <wornGraphicPath>Armor/BoneArmor/BoneArmorIII</wornGraphicPath>
       <layers>
         <li>Shell</li>
+        <li>Middle</li>
       </layers>
       <tags>
-        <!-- <li>Dunedain_Plate</li> -->
+        <li>pphhyy_Barbarian_BarbMarauderApparel</li>
       </tags>
       <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
       <!-- <defaultOutfitTags>
@@ -348,7 +351,7 @@
             <li>Skull</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>2</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>

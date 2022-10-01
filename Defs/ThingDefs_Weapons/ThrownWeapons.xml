@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb">
+    <defName>pphhyy_Barbarian_RustedJavalin</defName>
+    <label>Rusted Javalin</label>
+    <description>Rusted Javalin</description>
+    <graphicData>
+      <texPath>Weapons/Ranged/Barbarian_RustedJavalin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <relicChance>0</relicChance>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.71</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pphhyy_Barbarian_BarbThrown</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>pphhyy_RustedJavalin_Thrown</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <range>21.9</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+         <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>9</power>
+         <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>pphhyy_RustedJavalin_Thrown</defName>
+    <label>Rusted Javalin</label>
+    <graphicData>
+      <texPath>Weapons/Ranged/projectiles/Barbarian_RustedJavalin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <stoppingPower>2.5</stoppingPower>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
+      <speed>32</speed>
+    </projectile>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeRustedJavalin</defName>
+    <label>make Rusted Javalin</label>
+    <description>Make a Rusted Javalin made from a weapon looted on the battlefield.</description>
+    <jobString>Making Rusted Javalin.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_MeleeWeapon_Warfork</li>
+            <li>DankPyon_MeleeWeapon_Spetum</li>
+            <li>DankPyon_MeleeWeapon_Pitchfork</li>
+            <li>DankPyon_MeleeWeapon_HookedBlade</li>
+            <li>MeleeWeapon_Spear</li>
+            <li>DankPyon_MeleeWeapon_Billhook</li>
+            <li>DankPyon_MeleeWeapon_Pike</li>
+            <li>DankPyon_MeleeWeapon_Swordlance</li>
+            <li>DankPyon_MeleeWeapon_MilitiaSpear</li>
+            <li>DankPyon_MeleeWeapon_BoarSpear</li>
+            <li>DankPyon_MeleeWeapon_FightingSpear</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>DankPyon_MeleeWeapon_Warfork</li>
+        <li>DankPyon_MeleeWeapon_Spetum</li>
+        <li>DankPyon_MeleeWeapon_Pitchfork</li>
+        <li>DankPyon_MeleeWeapon_HookedBlade</li>
+        <li>MeleeWeapon_Spear</li>
+        <li>DankPyon_MeleeWeapon_Billhook</li>
+        <li>DankPyon_MeleeWeapon_Pike</li>
+        <li>DankPyon_MeleeWeapon_Swordlance</li>
+        <li>DankPyon_MeleeWeapon_MilitiaSpear</li>
+        <li>DankPyon_MeleeWeapon_BoarSpear</li>
+        <li>DankPyon_MeleeWeapon_FightingSpear</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_RustedJavalin>1</pphhyy_Barbarian_RustedJavalin>
+    </products>
+  </RecipeDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_SharpBarb">
+    <defName>pphhyy_Barbarian_RustedThrowingAxe</defName>
+    <label>Rusted ThrowingAxe</label>
+    <description>Rusted ThrowingAxe</description>
+    <graphicData>
+      <texPath>Weapons/Ranged/Barbarian_RustedThrowingAxe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <relicChance>0</relicChance>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.71</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>pphhyy_Barbarian_BarbThrown</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>pphhyy_RustedThrowingAxe_Thrown</defaultProjectile>
+        <warmupTime>2</warmupTime>
+        <range>18.9</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+         <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>9</power>
+         <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <verticalFlipNorth>false</verticalFlipNorth>
+        <angleAdjustmentNorth>-160</angleAdjustmentNorth>
+        <angleAdjustmentEast></angleAdjustmentEast>
+        <angleAdjustmentWest></angleAdjustmentWest>
+        <angleAdjustmentSouth></angleAdjustmentSouth>
+
+        <northOffset>(0.0,-1,0.1)</northOffset>
+        <southOffset>(-0.0,0,0.0)</southOffset>
+        <westOffset>(0.0,0,0.0)</westOffset>
+        <eastOffset>(-0.0,0,0.0)</eastOffset>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>pphhyy_RustedThrowingAxe_Thrown</defName>
+    <label>Rusted ThrowingAxe</label>
+    <graphicData>
+      <texPath>Weapons/Ranged/projectiles/Barbarian_RustedThrowingAxe</texPath>
+      <graphicClass>Graphic_Flicker</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <stoppingPower>2.5</stoppingPower>
+      <armorPenetrationBase>0.10</armorPenetrationBase>
+      <speed>30</speed>
+    </projectile>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeRustedThrowingAxe</defName>
+    <label>make Rusted ThrowingAxe</label>
+    <description>Make a Rusted ThrowingAxe made from a weapon looted on the battlefield.</description>
+    <jobString>Making Rusted ThrowingAxe.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DankPyon_MeleeWeapon_Hatchet</li>
+            <li>DankPyon_MeleeWeapon_Handaxe</li>
+            <li>DankPyon_MeleeWeapon_FightingAxe</li>
+            <li>DankPyon_MeleeWeapon_WoodcuttersAxe</li>
+            <li>DankPyon_MeleeWeapon_Bardiche</li>
+            <li>DankPyon_MeleeWeapon_Greataxe</li>
+            <li>DankPyon_MeleeWeapon_Longaxe</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+            <li>DankPyon_MeleeWeapon_Hatchet</li>
+            <li>DankPyon_MeleeWeapon_Handaxe</li>
+            <li>DankPyon_MeleeWeapon_FightingAxe</li>
+            <li>DankPyon_MeleeWeapon_WoodcuttersAxe</li>
+            <li>DankPyon_MeleeWeapon_Bardiche</li>
+            <li>DankPyon_MeleeWeapon_Greataxe</li>
+            <li>DankPyon_MeleeWeapon_Longaxe</li>
+            <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_RustedJavalin>1</pphhyy_Barbarian_RustedJavalin>
+    </products>
+  </RecipeDef>
+
+  </Defs>

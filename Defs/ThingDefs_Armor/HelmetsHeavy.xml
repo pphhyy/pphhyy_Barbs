@@ -95,6 +95,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbWarlordApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 
@@ -194,6 +197,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbWarlordApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 
@@ -278,6 +284,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbWarlordApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 

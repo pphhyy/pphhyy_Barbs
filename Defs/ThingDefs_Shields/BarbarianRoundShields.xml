@@ -21,7 +21,7 @@
       <MoveSpeed>-1.6</MoveSpeed>
     </equippedStatOffsets>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbRoundShield1</li>
     </weaponTags>
     <comps>
       <li Class="PawnShields.CompProperties_Shield">
@@ -151,7 +151,7 @@
       <MoveSpeed>-1.6</MoveSpeed>
     </equippedStatOffsets>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbRoundShield2</li>
     </weaponTags>
     <comps>
       <li Class="PawnShields.CompProperties_Shield">
@@ -269,7 +269,7 @@
       <MoveSpeed>-1.6</MoveSpeed>
     </equippedStatOffsets>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbRoundShield3</li>
     </weaponTags>
     <comps>
       <li Class="PawnShields.CompProperties_Shield">

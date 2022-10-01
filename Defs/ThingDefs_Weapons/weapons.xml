@@ -96,7 +96,7 @@
     <defName>pphhyy_Barbarian_BoneClub</defName>
     <label>Rusted Bone Club</label>
     <techLevel>Medieval</techLevel>
-    <description>A Bone Club made from the bones of animals or slain enemies..</description>
+    <description>A club weilded by barbarian tribes across the planet, cheap and easily availible to all members of the tribe.</description>
     <graphicData>
       <texPath>Weapons/Barbarian_BoneClub</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -104,7 +104,7 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbThrallWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -169,7 +169,7 @@
     <defName>pphhyy_Barbarian_ClawClub</defName>
     <label>Rusted Claw Club</label>
     <techLevel>Medieval</techLevel>
-    <description>A Claw Club made from the bones of animals or slain enemies.</description>
+    <description>A Club made from the bones of animals or slain enemies. Cheap, and widely availible to clan members. This one is enhanced with claws.</description>
     <graphicData>
       <texPath>Weapons/Barbarian_ClawClub</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -177,7 +177,7 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbThrallWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -242,7 +242,7 @@
     <defName>pphhyy_Barbarian_GreatBoneClub</defName>
     <label>Great Bone Club</label>
     <techLevel>Medieval</techLevel>
-    <description>A Great Bone Club made from the bones of animals or slain enemies..</description>
+    <description>A club crafted from the bones of fallen foes or slain beasts. Huge, and unweildy, used by the burliest and surliest of clan members. Better than the standard club for transfering force to the target.</description>
     <graphicData>
       <texPath>Weapons/Barbarian_GreatBoneClub</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -250,7 +250,7 @@
     </graphicData>
     <uiIconScale>1.4</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbThrallWeaponHeavy</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -315,7 +315,7 @@
     <defName>pphhyy_Barbarian_GreatSkullMace</defName>
     <label>Great Skull Mace</label>
     <techLevel>Medieval</techLevel>
-    <description>A Great Skull Mace made from the bones of animals or slain enemies..</description>
+    <description>A mace made from the skull of a fallen enemy or slain beast. Lashed and secured to a long pole, it uses its weight to overcome the armor of its enemies, though its weight can lead it to being slow and unwieldy.</description>
     <graphicData>
       <texPath>Weapons/Barbarian_GreatSkullMace</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -323,7 +323,7 @@
     </graphicData>
     <uiIconScale>1.4</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbThrallWeaponHeavy</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -389,14 +389,14 @@
     <defName>pphhyy_Barbarian_RustedSword</defName>
     <label>Rusted Sword</label>
     <techLevel>Medieval</techLevel>
-    <description>A rusted sword made from a weapon looted on the battlefield.</description>
+    <description>A crudly crafted or looted sword of the barbarian clans. It lacks a guard and is singularly edged. An effective cutting and slashing weapon, though it lacks defense, and the barbarian tribes lack the care nor the skill to maintain their equipment so it is rusted fairly badly, except along the edge.</description>
     <graphicData>
       <texPath>Weapons/Barbarian_RustedSword</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbNormalWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -485,7 +485,7 @@
   <RecipeDef>
     <defName>pphhyy_Barbarian_MakeRustedSword</defName>
     <label>make Rusted Sword</label>
-    <description>Make a rusted sword made from a weapon looted on the battlefield.</description>
+    <description>A crudly crafted sword of the barbarian clans. It lacks a guard and is singularly edged..</description>
     <jobString>Making Rusted Sword.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
@@ -538,7 +538,7 @@
     <defName>pphhyy_Barbarian_RustedClaymore</defName>
     <label>Rusted Claymore</label>
     <techLevel>Medieval</techLevel>
-    <description>A rusted Claymore made from a weapon looted on the battlefield.</description>
+    <description>A rusted Claymore made from a weapon looted on the battlefield. Its large, single edged blade leads to singularly devastating attacks, despite its crude construction.</description>
     <graphicData>
       <texPath>Weapons/Barbarian_RustedClaymore</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -546,7 +546,7 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbBigWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -600,7 +600,7 @@
   <RecipeDef>
     <defName>pphhyy_Barbarian_MakeRustedClaymore</defName>
     <label>make Rusted Claymore</label>
-    <description>Make a rusted Claymore made from a weapon looted on the battlefield.</description>
+    <description>Make a rusted Claymore from a weapon looted on the battlefield. Its large, single edged blade leads to singularly devastating attacks, despite its crude construction.</description>
     <jobString>Making Rusted Claymore.</jobString>
     <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
     <workSkill>Crafting</workSkill>
@@ -646,7 +646,7 @@
     <defName>pphhyy_Barbarian_RustedAxe</defName>
     <label>Rusted Axe</label>
     <techLevel>Medieval</techLevel>
-    <description>A rusted Axe made from a weapon looted on the battlefield.</description>
+    <description>A rusted Axe made from a weapon looted on the battlefield, pitted and decaying, it has found new life as a blade to chop down both heads, and trees if need be. A devastating thing against unarmored foes, and raiding targets..</description>
     <graphicData>
       <texPath>Weapons/Barbarian_RustedAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -654,7 +654,7 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbNormalWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -754,7 +754,7 @@
     <defName>pphhyy_Barbarian_RustedBattleAxe</defName>
     <label>Rusted Battle Axe</label>
     <techLevel>Medieval</techLevel>
-    <description>A rusted Battle Axe made from a weapon looted on the battlefield.</description>
+    <description>A rusted Battle Axe made from a weapon looted on the battlefield; larger and more centered on combat than smaller axes. A vile, deadly weapon just as likely to give tetanus as it is to give terrible cuts..</description>
     <graphicData>
       <texPath>Weapons/Barbarian_RustedBattleAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -762,7 +762,7 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbBigWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -864,7 +864,7 @@
     <defName>pphhyy_Barbarian_RustedGlaive</defName>
     <label>Rusted Glaive</label>
     <techLevel>Medieval</techLevel>
-    <description>A rusted Glaive made from a weapon looted on the battlefield.</description>
+    <description>A rusted Glaive made from a weapon looted on the battlefield. A particularly favorite weapon of the barbarian clansmen of middling wealth. A deadly cutter, and allowing distance to strike at targets with odd percision for such a crude thing.</description>
     <graphicData>
       <texPath>Weapons/Barbarian_RustedGlaive</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -872,7 +872,7 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbBigWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -988,7 +988,7 @@
     <defName>pphhyy_Barbarian_RustedMace</defName>
     <label>Rusted Mace</label>
     <techLevel>Medieval</techLevel>
-    <description>A rusted Mace made from a weapon looted on the battlefield.</description>
+    <description>A rusted Mace made from a weapon looted on the battlefield; a vital tool in cracking open the armors of rival clans or of raiding targets or wayward knights..</description>
     <graphicData>
       <texPath>Weapons/Barbarian_RustedMace</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -996,7 +996,7 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbNormalWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -1108,7 +1108,7 @@
     <defName>pphhyy_Barbarian_RustedSkullMace</defName>
     <label>Rusted skull Mace</label>
     <techLevel>Medieval</techLevel>
-    <description>A rusted skull Mace made from a weapon looted on the battlefield.</description>
+    <description>A rusted Mace made from a weapon looted on the battlefield; it is fitted with the skull of a fallen enemy atop the mace. Spikes of the mace's devilish design poke through the dried, bleached skull. It inspires terror, fear, and most of all, brings death to those that think they can hide behind their armor..</description>
     <graphicData>
       <texPath>Weapons/Barbarian_RustedSkullMace</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1116,7 +1116,7 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbNormalWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>
@@ -1228,7 +1228,7 @@
     <defName>pphhyy_Barbarian_RustedGreatSkullMace</defName>
     <label>Rusted Great Skull Mace</label>
     <techLevel>Medieval</techLevel>
-    <description>A rusted Great Skull Mace made from a weapon looted on the battlefield.</description>
+    <description>A rusted Great Mace made from a weapon looted on the battlefield; it is fitted with the skull of a fallen enemy atop the mace. Spikes of the mace's devilish design poke through the dried, bleached skull. It inspires terror, fear, and most of all, brings death to those that think they can hide behind their armor..</description>
     <graphicData>
       <texPath>Weapons/Barbarian_RustedGreatSkullMace</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1236,7 +1236,7 @@
     </graphicData>
     <uiIconScale>1.2</uiIconScale>
     <weaponTags>
-      <li>NeolithicMeleeBasic</li>
+      <li>pphhyy_Barbarian_BarbBigWeapon</li>
     </weaponTags>
     <weaponClasses>
       <li>Neolithic</li>

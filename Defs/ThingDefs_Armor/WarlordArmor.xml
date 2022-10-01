@@ -85,7 +85,7 @@
         <li>Shell</li>
       </layers>
       <tags>
-        <!-- <li>Dunedain_Plate</li> -->
+        <li>pphhyy_Barbarian_BarbWarlordApparel</li>
       </tags>
       <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
       <!-- <defaultOutfitTags>
@@ -111,13 +111,11 @@
         <filter>
           <thingDefs>
             <li>Apparel_PowerArmor</li>
-            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-            <li>Apparel_ArmorHelmetCataphract</li>
-            <li>Apparel_ArmorHelmetRecon</li>
-            <li>Apparel_PowerArmorHelmet</li> -->
+            <li>DankPyon_Apparel_FullPlate</li>
+            <li>DankPyon_Apparel_FullPlateGilded</li>
+            <li>Apparel_ArmorCataphract</li>
+            <li>Apparel_ArmorRecon</li>
+            <li>Apparel_PlateArmor</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -133,15 +131,13 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>Apparel_PowerArmor</li>
-        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-        <li>Apparel_ArmorHelmetCataphract</li>
-        <li>Apparel_ArmorHelmetRecon</li>
-        <li>Apparel_PowerArmorHelmet</li> -->
-        <li>Skull</li>
+            <li>Apparel_PowerArmor</li>
+            <li>DankPyon_Apparel_FullPlate</li>
+            <li>DankPyon_Apparel_FullPlateGilded</li>
+            <li>Apparel_ArmorCataphract</li>
+            <li>Apparel_ArmorRecon</li>
+            <li>Apparel_PlateArmor</li>
+            <li>Skull</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -188,6 +184,7 @@
         <li>Shell</li>
       </layers>
       <tags>
+         <li>pphhyy_Barbarian_BarbWarlordApparel</li>
       </tags>
       <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
     </apparel>
@@ -209,7 +206,7 @@
       <li>
         <filter>
           <thingDefs>
-            <li>Apparel_PowerArmor</li>
+            <li>pphhyy_Barbarian_WarlordArmor</li>
             <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
             <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
             <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
@@ -227,7 +224,7 @@
             <li>Skull</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>2</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>

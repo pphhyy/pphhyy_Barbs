@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_BarbLeatherCoat</defName>
+    <label>Leather Coat</label>
+    <description>Leather Coat made from Leather and skulls looted on the battlefield, or while hunting.</description>
+    <graphicData>
+      <texPath>Armor/BarbLeatherCoat/BarbLeatherCoatI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>10</Mass>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/BarbLeatherCoat/BarbLeatherCoatI</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeBarbLeatherCoat</defName>
+    <label>make Leather Coat</label>
+    <description>Make a Leather Coat Mail set made from Leather and skulls looted on the battlefield, or while hunting.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarian_BarbTribal</li>
+            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+            <li>Apparel_ArmorHelmetCataphract</li>
+            <li>Apparel_ArmorHelmetRecon</li>
+            <li>Apparel_PowerArmorHelmet</li> -->
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarian_BarbTribal</li>
+        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
+        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
+        <li>Apparel_ArmorHelmetCataphract</li>
+        <li>Apparel_ArmorHelmetRecon</li>
+        <li>Apparel_PowerArmorHelmet</li> -->
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_BarbLeatherCoat>1</pphhyy_Barbarian_BarbLeatherCoat>
+    </products>
+	<!-- <researchPrerequisite>Brachyura_Breeding_I</researchPrerequisite> -->
+  </RecipeDef>
+
+  <ThingDef ParentName="ArmorSmithableBaseBarb">
+    <defName>pphhyy_Barbarian_BarbLeatherCoatII</defName>
+    <label>Leather Coat II</label>
+    <description>Leather Coat made from Leather and skulls looted on the battlefield, or while hunting.</description>
+    <!-- <recipeMaker>
+      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+      <researchPrerequisite>Brachyura_MedievalArmor</researchPrerequisite>
+      <recipeUsers>
+        <li>Brachyura_ArmorBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker> -->
+    <graphicData>
+      <texPath>Armor/BarbLeatherCoat/BarbLeatherCoatII</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <!-- <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories> -->
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <WorkToMake>1000</WorkToMake>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Mass>10</Mass>
+      <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.15</ArmorRating_Heat>
+      <Insulation_Cold>1</Insulation_Cold>
+      <EquipDelay>5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Armor/BarbLeatherCoat/BarbLeatherCoatII</wornGraphicPath>
+      <layers>
+      <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>pphhyy_Barbarian_BarbMarauderApparel</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+    </apparel>
+  </ThingDef>
+
+  <RecipeDef>
+    <defName>pphhyy_Barbarian_MakeBarbLeatherCoatII</defName>
+    <label>make Leather Coat II</label>
+    <description>Make a Leather Coat Mail set made from Leather and skulls looted on the battlefield, or while hunting.</description>
+    <jobString>Making Rusted Armor</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Smith</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>pphhyy_Barbarian_BarbLeatherCoat</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Skull</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>pphhyy_Barbarian_BarbLeatherCoat</li>
+        <li>Skull</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <pphhyy_Barbarian_BarbLeatherCoatII>1</pphhyy_Barbarian_BarbLeatherCoatII>
+    </products>
+  </RecipeDef>
+
+</Defs>

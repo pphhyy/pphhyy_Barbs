@@ -39,8 +39,8 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>1.5</Mass>
       <Flammability>0.4</Flammability>
-      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
       <ArmorRating_Heat>0.54</ArmorRating_Heat>
       <Insulation_Cold>4</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
@@ -63,6 +63,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 
@@ -82,14 +85,23 @@
       <li>
         <filter>
           <thingDefs>
-            <li>DankPyon_Headgear_GreatHelm</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-            <li>Apparel_ArmorHelmetCataphract</li>
-            <li>Apparel_ArmorHelmetRecon</li>
-            <li>Apparel_PowerArmorHelmet</li>
+            <li>DankPyon_Headgear_PaddedNasalHelmet</li>
+            <li>DankPyon_Headgear_PaddedKettleHelmet</li>
+            <li>DankPyon_Headgear_PaddedFlatTopHelmet</li>
+            <li>DankPyon_Headgear_ChainCoif</li>
+            <li>DankPyon_Headgear_ChainCoifClosed</li>
+            <li>DankPyon_Headgear_ChainCoifFull</li>
+            <li>DankPyon_Headgear_ChainNasalHelmet</li>
+            <li>DankPyon_Headgear_ChainNasalRedHelmet</li>
+            <li>DankPyon_Headgear_ChainKettleHelmet</li>
+            <li>DankPyon_Headgear_Chain_FlatTopHelmet</li>
+            <li>DankPyon_Headgear_ClosedChain_FlatTopHelmet</li>
+            <li>DankPyon_Headgear_ChainClosedFlatTopHelmet</li>
+            <li>DankPyon_Headgear_ZweihanderHelm</li>
+            <li>DankPyon_Headgear_ZweihanderHelmAmboise</li>
+            <li>DankPyon_Headgear_ZweihanderHelmSoren</li>
+            <li>DankPyon_Headgear_ZweihanderHelmOswin</li>
+            <li>DankPyon_Headgear_ZweihanderHelmHesse</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -105,15 +117,24 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>DankPyon_Headgear_GreatHelm</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-        <li>Apparel_ArmorHelmetCataphract</li>
-        <li>Apparel_ArmorHelmetRecon</li>
-        <li>Apparel_PowerArmorHelmet</li>
-        <li>Skull</li>
+            <li>DankPyon_Headgear_PaddedNasalHelmet</li>
+            <li>DankPyon_Headgear_PaddedKettleHelmet</li>
+            <li>DankPyon_Headgear_PaddedFlatTopHelmet</li>
+            <li>DankPyon_Headgear_ChainCoif</li>
+            <li>DankPyon_Headgear_ChainCoifClosed</li>
+            <li>DankPyon_Headgear_ChainCoifFull</li>
+            <li>DankPyon_Headgear_ChainNasalHelmet</li>
+            <li>DankPyon_Headgear_ChainNasalRedHelmet</li>
+            <li>DankPyon_Headgear_ChainKettleHelmet</li>
+            <li>DankPyon_Headgear_Chain_FlatTopHelmet</li>
+            <li>DankPyon_Headgear_ClosedChain_FlatTopHelmet</li>
+            <li>DankPyon_Headgear_ChainClosedFlatTopHelmet</li>
+            <li>DankPyon_Headgear_ZweihanderHelm</li>
+            <li>DankPyon_Headgear_ZweihanderHelmAmboise</li>
+            <li>DankPyon_Headgear_ZweihanderHelmSoren</li>
+            <li>DankPyon_Headgear_ZweihanderHelmOswin</li>
+            <li>DankPyon_Headgear_ZweihanderHelmHesse</li>
+            <li>Skull</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -160,8 +181,8 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>1.5</Mass>
       <Flammability>0.4</Flammability>
-      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
       <ArmorRating_Heat>0.54</ArmorRating_Heat>
       <Insulation_Cold>4</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
@@ -184,6 +205,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 
@@ -204,13 +228,6 @@
         <filter>
           <thingDefs>
             <li>pphhyy_Barbarians_MetalHelm</li>
-            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-            <li>Apparel_ArmorHelmetCataphract</li>
-            <li>Apparel_ArmorHelmetRecon</li>
-            <li>Apparel_PowerArmorHelmet</li> -->
           </thingDefs>
         </filter>
         <count>1</count>
@@ -221,19 +238,12 @@
             <li>Skull</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>2</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>pphhyy_Barbarians_MetalHelm</li>
-        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-        <li>Apparel_ArmorHelmetCataphract</li>
-        <li>Apparel_ArmorHelmetRecon</li>
-        <li>Apparel_PowerArmorHelmet</li> -->
         <li>Skull</li>
       </thingDefs>
     </fixedIngredientFilter>
@@ -281,8 +291,8 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>1.5</Mass>
       <Flammability>0.4</Flammability>
-      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
       <ArmorRating_Heat>0.54</ArmorRating_Heat>
       <Insulation_Cold>4</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
@@ -305,6 +315,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 
@@ -325,13 +338,6 @@
         <filter>
           <thingDefs>
             <li>pphhyy_Barbarians_MetalHelmII</li>
-            <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-            <li>Apparel_ArmorHelmetCataphract</li>
-            <li>Apparel_ArmorHelmetRecon</li>
-            <li>Apparel_PowerArmorHelmet</li> -->
           </thingDefs>
         </filter>
         <count>1</count>
@@ -342,19 +348,12 @@
             <li>Skull</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>3</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>pphhyy_Barbarians_MetalHelmII</li>
-        <!-- <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-        <li>Apparel_ArmorHelmetCataphract</li>
-        <li>Apparel_ArmorHelmetRecon</li>
-        <li>Apparel_PowerArmorHelmet</li> -->
         <li>Skull</li>
       </thingDefs>
     </fixedIngredientFilter>
@@ -380,8 +379,8 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>1.5</Mass>
       <Flammability>0.4</Flammability>
-      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.70</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
       <ArmorRating_Heat>0.54</ArmorRating_Heat>
       <Insulation_Cold>4</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
@@ -404,6 +403,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 
@@ -423,14 +425,23 @@
       <li>
         <filter>
           <thingDefs>
-            <li>DankPyon_Headgear_GreatHelm</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-            <li>Apparel_ArmorHelmetCataphract</li>
-            <li>Apparel_ArmorHelmetRecon</li>
-            <li>Apparel_PowerArmorHelmet</li>
+            <li>DankPyon_Headgear_PaddedNasalHelmet</li>
+            <li>DankPyon_Headgear_PaddedKettleHelmet</li>
+            <li>DankPyon_Headgear_PaddedFlatTopHelmet</li>
+            <li>DankPyon_Headgear_ChainCoif</li>
+            <li>DankPyon_Headgear_ChainCoifClosed</li>
+            <li>DankPyon_Headgear_ChainCoifFull</li>
+            <li>DankPyon_Headgear_ChainNasalHelmet</li>
+            <li>DankPyon_Headgear_ChainNasalRedHelmet</li>
+            <li>DankPyon_Headgear_ChainKettleHelmet</li>
+            <li>DankPyon_Headgear_Chain_FlatTopHelmet</li>
+            <li>DankPyon_Headgear_ClosedChain_FlatTopHelmet</li>
+            <li>DankPyon_Headgear_ChainClosedFlatTopHelmet</li>
+            <li>DankPyon_Headgear_ZweihanderHelm</li>
+            <li>DankPyon_Headgear_ZweihanderHelmAmboise</li>
+            <li>DankPyon_Headgear_ZweihanderHelmSoren</li>
+            <li>DankPyon_Headgear_ZweihanderHelmOswin</li>
+            <li>DankPyon_Headgear_ZweihanderHelmHesse</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -446,15 +457,24 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>DankPyon_Headgear_GreatHelm</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-        <li>Apparel_ArmorHelmetCataphract</li>
-        <li>Apparel_ArmorHelmetRecon</li>
-        <li>Apparel_PowerArmorHelmet</li>
-        <li>Skull</li>
+            <li>DankPyon_Headgear_PaddedNasalHelmet</li>
+            <li>DankPyon_Headgear_PaddedKettleHelmet</li>
+            <li>DankPyon_Headgear_PaddedFlatTopHelmet</li>
+            <li>DankPyon_Headgear_ChainCoif</li>
+            <li>DankPyon_Headgear_ChainCoifClosed</li>
+            <li>DankPyon_Headgear_ChainCoifFull</li>
+            <li>DankPyon_Headgear_ChainNasalHelmet</li>
+            <li>DankPyon_Headgear_ChainNasalRedHelmet</li>
+            <li>DankPyon_Headgear_ChainKettleHelmet</li>
+            <li>DankPyon_Headgear_Chain_FlatTopHelmet</li>
+            <li>DankPyon_Headgear_ClosedChain_FlatTopHelmet</li>
+            <li>DankPyon_Headgear_ChainClosedFlatTopHelmet</li>
+            <li>DankPyon_Headgear_ZweihanderHelm</li>
+            <li>DankPyon_Headgear_ZweihanderHelmAmboise</li>
+            <li>DankPyon_Headgear_ZweihanderHelmSoren</li>
+            <li>DankPyon_Headgear_ZweihanderHelmOswin</li>
+            <li>DankPyon_Headgear_ZweihanderHelmHesse</li>
+            <li>Skull</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -478,8 +498,8 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Mass>1.5</Mass>
       <Flammability>0.4</Flammability>
-      <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
-      <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
       <ArmorRating_Heat>0.54</ArmorRating_Heat>
       <Insulation_Cold>4</Insulation_Cold>
       <Insulation_Heat>2</Insulation_Heat>
@@ -502,6 +522,9 @@
       </layers>
       <defaultOutfitTags>
       </defaultOutfitTags>
+      <tags>
+        <li>pphhyy_Barbarian_BarbWarriorApparel</li>
+      </tags>
     </apparel>
   </ThingDef>
 
@@ -521,14 +544,7 @@
       <li>
         <filter>
           <thingDefs>
-            <li>DankPyon_Headgear_GreatHelm</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-            <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-            <li>Apparel_ArmorHelmetCataphract</li>
-            <li>Apparel_ArmorHelmetRecon</li>
-            <li>Apparel_PowerArmorHelmet</li>
+            <li>pphhyy_Barbarians_SpikedCap</li>
           </thingDefs>
         </filter>
         <count>1</count>
@@ -539,19 +555,12 @@
             <li>Skull</li>
           </thingDefs>
         </filter>
-        <count>1</count>
+        <count>2</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>DankPyon_Headgear_GreatHelm</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm1c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm2c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm3c</li>
-        <li>DankPyon_Headgear_HeraldicGreatHelm4c</li>
-        <li>Apparel_ArmorHelmetCataphract</li>
-        <li>Apparel_ArmorHelmetRecon</li>
-        <li>Apparel_PowerArmorHelmet</li>
+        <li>pphhyy_Barbarians_SpikedCap</li>
         <li>Skull</li>
       </thingDefs>
     </fixedIngredientFilter>

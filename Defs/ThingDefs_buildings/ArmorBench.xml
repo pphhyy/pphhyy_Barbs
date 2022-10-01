@@ -59,6 +59,25 @@
        <li>pphhyy_Barbarian_MakeChosenMail</li>
        <li>pphhyy_Barbarian_MakeChosenMailII</li>
        <li>pphhyy_Barbarian_MakeBearHeaddressII</li>
+       <li>pphhyy_Barbarian_MakeMail</li>
+       <li>pphhyy_Barbarian_MakeMailII</li>
+       <li>pphhyy_Barbarian_MakeScale</li>
+       <li>pphhyy_Barbarian_MakeScaleII</li>
+       <li>pphhyy_Barbarian_MakeBarbLeatherCoat</li>
+       <li>pphhyy_Barbarian_MakeBarbLeatherCoatII</li>
+       <li>pphhyy_Barbarian_MakeChosenHorn</li>
+       <li>pphhyy_Barbarian_MakeChosenHornII</li>
+       <li>pphhyy_Barbarian_MakeChosenHornIII</li>
+       <li>pphhyy_Barbarian_MakeChosenAntler</li>
+       <li>pphhyy_Barbarian_MakeChosenAntlerII</li>
+       <li>pphhyy_Barbarian_MakeChosenAntlerIII</li>
+       <li>pphhyy_Barbarian_MakeBoneHelmII</li>
+       <li>pphhyy_Barbarian_MakeBoneHelmIII</li>
+       <li>pphhyy_Barbarian_MakeMetalHelm</li>
+       <li>pphhyy_Barbarian_MakeMetalHelmII</li>
+       <li>pphhyy_Barbarian_MakeMetalHelmIII</li>
+       <li>pphhyy_Barbarian_MakeSpikedCap</li>
+       <li>pphhyy_Barbarian_MakeSpikedCapII</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
