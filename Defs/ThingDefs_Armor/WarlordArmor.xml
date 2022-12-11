@@ -2,7 +2,7 @@
 <Defs>
 
   <ThingDef Name="ArmorSmithableBaseBarb" ParentName="ApparelBase" Abstract="True">
-    <smeltable>true</smeltable>
+    <smeltable>false</smeltable>
     <!-- <recipeMaker>
       <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
       <workSkill>Crafting</workSkill>

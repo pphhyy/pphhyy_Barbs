@@ -96,9 +96,9 @@
     
 	<PawnKindDef ParentName="pphhyy_Barbarian_NonPlayerKindBase" Name="pphhyy_Barbarian_WarlordBase" Abstract="True">
 		<combatPower>85</combatPower>
-		<baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+		<!-- <baseRecruitDifficulty>0.90</baseRecruitDifficulty>
 		<minGenerationAge>30</minGenerationAge>
-		<maxGenerationAge>999</maxGenerationAge>
+		<maxGenerationAge>999</maxGenerationAge> -->
 		<itemQuality>Poor</itemQuality>
 		<factionLeader>true</factionLeader>
 		<canBeSapper>true</canBeSapper>

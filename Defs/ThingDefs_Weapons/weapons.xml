@@ -3,7 +3,7 @@
 
   <ThingDef Name="BaseMeleeWeaponBarb" Abstract="True" ParentName="BaseWeapon">
     <techLevel>Neolithic</techLevel>
-    <smeltable>true</smeltable>
+    <smeltable>false</smeltable>
     <burnableByRecipe>true</burnableByRecipe>
     <thingCategories>
       <li>WeaponsMelee</li>

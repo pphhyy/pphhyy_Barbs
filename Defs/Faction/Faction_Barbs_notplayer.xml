@@ -66,8 +66,6 @@
         <commonality>1</commonality>
       </li>
     </backstoryFilters>
-    <!-- Varriation of genetic apperance, factions with low genetic varriance will have skin color more clustered together (thansk to Jamaican Castle for that) -->
-    <geneticVariance>1</geneticVariance>
     <!-- Types of caravans your faction will have -->
     <caravanTraderKinds>
       <!-- <li>Caravan_Outlander_BulkGoods</li>

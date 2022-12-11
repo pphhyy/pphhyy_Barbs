@@ -28,6 +28,7 @@
   </ThingDef>
 
   <ThingDef Name="HatMakeableBaseBarbs" ParentName="ApparelMakeableBaseBarbs" Abstract="True">
+    <smeltable>false</smeltable>
     <thingCategories>
       <li>Headgear</li>
     </thingCategories>
